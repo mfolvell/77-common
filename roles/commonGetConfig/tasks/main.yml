@@ -3,7 +3,7 @@
 - name: Creates directory {{ path_update }}
   file:
     path: "{{ path_update }}"
-    owner: "{{ appInstallationUser }}"
+    owner: "{{ appRunUser }}"
     state: directory
     mode: '0775'
 
@@ -11,19 +11,19 @@
   template:
     src: ../templates/get_gateway_group.sh.j2
     dest: "{{ path_update }}/get_gateway_group.sh"
-    owner: "{{ appInstallationUser }}"
+    owner: "{{ appRunUser }}"
     mode: '0777'
 #
 - name: Template get_gateway_instance.sh.j2
   template:
     src: ../templates/get_gateway_instance.sh.j2
     dest: "{{ path_update }}/get_gateway_instance.sh"
-    owner: "{{ appInstallationUser }}"
+    owner: "{{ appRunUser }}"
     mode: '0777'
 
 - name: Template get_gateway_nodemanager.sh.j2
   template:
     src: ../templates/get_gateway_nodemanager.sh.j2
     dest: "{{ path_update }}/get_gateway_nodemanager.sh"
-    owner: "{{ appInstallationUser }}"
+    owner: "{{ appRunUser }}"
     mode: '0777'
