@@ -4,7 +4,7 @@
   file:
     path: "{{ path_update }}"
     owner: "{{ appRunUser }}"
-    group: axway
+    owner: "{{ appInstallationUser }}"
     state: directory
     mode: '0775'
 
