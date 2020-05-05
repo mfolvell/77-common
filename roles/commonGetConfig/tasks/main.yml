@@ -3,7 +3,6 @@
 - name: Creates directory {{ path_update }}
   file:
     path: "{{ path_update }}"
-    owner: "{{ appRunUser }}"
     owner: "{{ appInstallationUser }}"
     state: directory
     mode: '0775'
