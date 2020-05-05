@@ -1,0 +1,11 @@
+[gatewayservers]
+lol-apigw02.test.sparebank1.no axwaytype=admin hostnameShort=lol-apigw02 anmHost=lol-apigw-admin02.test.sparebank1.no gateway_group_name=gr2
+
+
+
+[gatewayservers-total]
+lol-apigw-admin02.test.sparebank1.no axwaytype=admin hostnameShort=lol-apigw-admin02 anmHost=lol-apigw-admin01.test.sparebank1.no gateway_group_name=gr2
+lol-apigw-admin02.test.sparebank1.no axwaytype=admin hostnameShort=lol-apigw-admin02 anmHost=lol-apigw-admin01.test.sparebank1.no gateway_group_name=gr2
+lol-apigw-admin01.test.sparebank1.no axwaytype=domainAdmin hostnameShort=lol-apigw-admin01 anmHost= gateway_group_name=gr1
+lol-apigw01.test.sparebank1.no axwaytype=admin hostnameShort=lol-apigw01 anmHost=lol-apigw-admin01.test.sparebank1.no gateway_group_name=gr1
+lol-apigw-admin02.test.sparebank1.no axwaytype=admin hostnameShort=lol-apigw-admin02 anmHost=lol-apigw-admin01.test.sparebank1.no gateway_group_name=gr2

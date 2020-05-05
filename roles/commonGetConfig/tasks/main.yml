@@ -1,0 +1,22 @@
+---
+# ==========================================================================================
+- name: Template get_gateway_group.sh.j2
+  template:
+    src: ../templates/get_gateway_group.sh.j2
+    dest: "{{ path_update }}/get_gateway_group.sh"
+    owner: "{{ appInstallationUser }}"
+    mode: '0777'
+#
+- name: Template get_gateway_instance.sh.j2
+  template:
+    src: ../templates/get_gateway_instance.sh.j2
+    dest: "{{ path_update }}/get_gateway_instance.sh"
+    owner: "{{ appInstallationUser }}"
+    mode: '0777'
+
+- name: Template get_gateway_nodemanager.sh.j2
+  template:
+    src: ../templates/get_gateway_nodemanager.sh.j2
+    dest: "{{ path_update }}/get_gateway_nodemanager.sh"
+    owner: "{{ appInstallationUser }}"
+    mode: '0777'

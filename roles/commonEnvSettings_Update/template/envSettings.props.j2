@@ -1,0 +1,127 @@
+
+# This file is read when the server starts up. If a server configuration contains a value in the format
+# ${env.X}, where X is any string (for example, MyCustomSetting), this file MUST contain an equivalent
+# name-value pair of env.MyCustomSetting=MyCustomValue.
+# When the server starts up, every occurrence of env.MyCustomSetting is expanded to the value of MyCustomValue.
+# For example, by default the port in the server configuration is set to ${env.PORT.TRAFFIC}, specifying a name-value
+# pair of env.PORT.TRAFFIC=8080 results in the server opening up port 8080 at start up.
+
+# An example of how you might bind a reference to a host-specific certificate to a given deployment. The
+# SSL X509 Certificate in the 'SSL Interface' configuration item can then reference it using the binding in
+# variable '${env.serverCertificate}'
+#env.serverCertificate=${system.prefix.cert}CN=MYHOST
+
+# the default port which the Instance listens on for HTTP traffic
+env.PORT.TRAFFIC=8080
+
+# the default port which the Instance listens on for management/configuration HTTP traffic
+env.PORT.MANAGEMENT=8085
+
+# the default port which the Instance listens on for sample messages
+env.PORT.SAMPLE.SERVICES=8081
+
+# the hostname of the OAuth Server defaults to localhost
+env.OAUTH.SERVER=localhost
+
+# the default port which OAuth 2.0 Services listen on for traffic
+env.PORT.OAUTH2.SERVICES=8089
+
+# the hostname of the OAuth Client defaults to localhost
+env.OAUTH.CLIENT=localhost
+
+# the default port which OAuth 2.0 Client Services listen on for traffic
+env.PORT.OAUTH2.CLIENT=8088
+
+# the default AMA broker port
+env.BROKER.PORT=61616
+
+# API Manager Port
+env.PORT.APIPORTAL=8075
+
+# API Manager Traffic Port
+env.PORT.PORTAL.TRAFFIC=8065
+
+# Hostname
+env.EHCACHE.HOSTNAME={{ inventory_hostname  }}
+
+# Instance Number
+env.local.instance=¤¤inst¤¤
+
+# Chache rmiURL
+env.cache.rmiURL=//{{ inventory_hostname }}:40001/accessToken-rmt|//{{ inventory_hostname }}:40001/accessToken-sstKey|//{{ inventory_hostname }}:40001/AuthZCode-sstKey|//{{ inventory_hostname }}:40001/AuthZCode-oldAccessToken|//{{ inventory_hostname }}:40001/AuthZCode-finInst|//{{ inventory_hostname }}:40001/AuthZCode-financialAgreement|//{{ inventory_hostname }}:40001/accessToken-finInst|//{{ inventory_hostname }}:40001/accessToken-financialAgreement|//{{ inventory_hostname }}:40001/authenticationSubjectId-accessTokens
+
+# Analytics Database properties
+env.analytics.dburl={{ analytics_dburl }}
+env.analytics.dbuser={{ analytics_dbuser }}
+env.analytics.dbpassword={{ analytics_dbpassword }}
+
+# Api portal username and password (for accessing KPS data from policies)
+env.apiportal.username={{ api_manager_username  }}
+env.apiportal.password={{ api_manager_password }}
+
+# API Gateway Admin username and Password
+env.apigw.username={{ api_gateway_username }}
+env.apigw.password={{ api_gateway_password }}
+
+# API Gateway sb1sk- services username and password
+env.gateway.sb1sk.username={{ gateway_sb1sk_username }}
+env.gateway.sb1sk.password={{ gateway_sb1sk_password }}
+
+# API Gateway esb - services username and password
+env.gateway.esb.username={{ gateway_esb_username }}
+env.gateway.esb.password={{ gateway_esb_password }}
+
+# Whitelist for CSRF protection, primarily for allowing a load balancer
+env.csrf.whitelist={{ csrf_whitelist }}
+
+# Cache expiration times
+env.cache.authzcode.timetoliveseconds=300
+env.cache.accesstokenToRmt.timetoliveseconds=15552000
+env.cache.accesstokenToSstKey.timetoliveseconds=900
+env.cache.accesstokenToSstKey.timetoidleseconds=900
+env.accesstoken.expirationtimeseconds=15552000
+env.refreshtoken.expirationtimeseconds=15552000
+env.cache.idporten.jwk.timetoliveseconds=60
+
+# OAuth consent screen URLs
+env.consentscreen.manualredirect.path=${environment.VDISTDIR}/samples/oauth/templates/requestAccess.html
+env.consentscreen.automaticredirect.path=${environment.VDISTDIR}/samples/oauth/templates/requestAccessAutomatically.html
+
+# Integration URLs
+env.apiautorisasjon.basepath={{ apiautorisasjon_basepath }}
+env.financialinstitutionapp.basepath=https://api-financialinstitutions.{{ stage }}.sparebank1.no
+env.loginapp.internal.basepath=https://login-beta.{{ stage }}.sparebank1.no
+env.loginapp.basepath=https://login-beta.{{ stage }}.sparebank1.no
+env.sb1sk.basepath={{ sb1sk_basepath }}
+env.difi.basepath={{ difi_basepath }}
+
+# Used by openconnect id flows
+env.oidconnect.certificate=/[Certificates]/[Certificate]dname=openid-connect-sign
+
+# Used by ldap autentication in API-Manager
+apimanager.ad.admin.role={{ apimanager_ad_admin_role }}
+apimanager.ad.oadmin.role=NotInUseWebAPI
+apimanager.ad.user.role=NotInUseWebAPI
+
+# Global HTTP header incoming whitelist
+env.http.header.incoming.whitelist=Accept,Accept-Charset,Accept-Encoding,Accept-Language,Accept-Datetime,Authorization,Cache-Control,Connection,Cookie,Content-Length,Content-Type,Date,Forwarded,From,Host,Location,Origin,Pragma,Referer,User-Agent,Upgrade,Via,Warning,X-Forwarded-For,X-Forwarded-Host,X-Forwarded-Proto,AppKey,sst,rmt,financial_institution_id,financial_agreement_id,useAutomaticConsentScreen,ssn,rmt_expiration_date_time,agreement_ids,PartyID,Legal-Mandate,CorrelationID,AccountID,authorization,userinfo,X-Request-Id,X-Request-ID,X-User-Id,X-nonce,X-dynamicLinkingStamp,X-authmethod,X-clientIpAddress,X-bankRegNumber,X-idpType,customerID,x-Nnin,x-Application-Id,x-User-Id
+
+
+# Global HTTP header outgoing whitelist
+env.http.header.outgoing.whitelist=Access-Control-Allow-Origin,Accept-Patch,Accept-Ranges,Allow,Alt-Svc,Cache-Control,Connection,Content-Disposition,Content-Encoding,Content-Language,Content-Length,Content-Location,Content-Range,Content-Type,Date,ETag,Expires,Last-Modified,Link,Location,Pragma,Proxy-Authenticate,Public-Key-Pins,Refresh,Retry-After,Server,Set-Cookie,Status,Strict-Transport-Security,Trailer,Transfer-Encoding,TSV,Upgrade,Vary,WarnJaing,WWW-Authenticate,X-Correlation-ID,ConsentScreen,Status,X-Request-Id,X-Request-ID,X-User-Id,X-nonce,X-dynamicLinkingStamp,X-authmethod,X-clientIpAddress,X-bankRegNumber,numberOfPages,audience
+
+# cassandra keyspace
+env.cassandra.keyspace={{ cassandra_keyspace }}
+
+# cassandra hosts
+env.cass01={{ cassandra_env01 }}
+env.cass02={{ cassandra_env02 }}
+env.cass03={{ cassandra_env03 }}
+
+### PSD2 settings
+env.psd2.token.issuer={{ issuer }}
+# claim iss
+env.psd2.token.lifespan={{ token_lifespan }}
+# claim exp + iat (in secounds)
+# claim aud
+env.psd2.token.audience={{ psd2_token_audience   }}

@@ -1,0 +1,6 @@
+#!/bin/bash
+# ================================================================
+hostShort={{ hostnameShort }}
+instance=$(jq --arg hostnameShort "$hostShort" --slurp '.[].groups[].services[] | select (.id | contains("instance")) | select(.name==$hostnameShort) |.id' {{ api_gateway_home }}/groups/topology.json)
+
+echo "${instance//'"'}"

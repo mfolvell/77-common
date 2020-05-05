@@ -1,0 +1,22 @@
+#!/bin/bash
+
+TOOL_DIR={{ api_gateway_home }}/posix/bin
+echo "TOOL_DIR=$TOOL_DIR"
+
+CRON_DIR=/etc/cron.d
+CRON_FILE=$CRON_DIR/axwayKpsBackup
+BACKUP_CRON="0 * * * * axway {{ script_home }}cron.d/axwayKpsBackup.sh"
+echo "BACKUP_CRON=$BACKUP_CRON"
+#
+rm /var/spool/cron/axway > /dev/null 2>&1 || :
+rm $CRON_FILE > /dev/null 2>&1 || :
+touch $CRON_FILE
+#
+echo Building axway cron file
+echo "$BACKUP_CRON" >> $CRON_FILE
+printf "\n" >> $CRON_FILE
+#
+#     echo Installing axway cron
+cp -f $CRON_FILE $CRON_DIR
+#
+rm $BACKUP_DIR/README.TXT > /dev/null 2>&1 || :

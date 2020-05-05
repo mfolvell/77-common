@@ -1,0 +1,59 @@
+---
+# # ===================================================================
+# # transfering the files to the servers and installing software with nodemanager
+# - hosts: gatewayservers
+#   vars_files:
+#     - ./../inventories/global/vars.yml
+#     - ./../inventories/{{ env }}/vars.yml
+#   gather_facts: True
+#   become: yes
+#   become_user: root
+#   serial: 1
+#   roles:
+#     - role : ../roles/pre_inst
+#     - role : ../roles/createNodemgr
+#
+# # ===================================================================
+# # deployConfig to the admin servers only.  The config is only deployFed
+# # to the admin servers.
+# - hosts: gatewayservers
+#   vars_files:
+#     - ./../inventories/global/vars.yml
+#     - ./../inventories/{{ env }}/vars.yml
+#   gather_facts: True
+#   become: yes
+#   become_user: root
+#   serial: 1
+#   roles:
+#     - role : ../roles/deployConfig
+#
+# # ===================================================================
+# # Config and setup of api manager
+# # to the admin servers.
+# - hosts: gatewayservers
+#   vars_files:
+#     - ./../inventories/global/vars.yml
+#     - ./../inventories/{{ env }}/vars.yml
+#   gather_facts: True
+#   become: yes
+#   become_user: root
+#   serial: 1
+#   roles:
+#     - role : ../roles/createAPIAdmin
+
+# ===================================================================
+# Add nodemanager sertificates to sert store
+- hosts: gatewayservers
+  vars_files:
+    - ./../inventories/global/vars.yml
+    - ./../inventories/{{ env }}/vars.yml
+  gather_facts: True
+  become: yes
+  become_user: root
+  serial: 1
+  roles:
+    - role : ../roles/post_inst
+
+
+
+#     - role : ../roles/post_inst

@@ -1,0 +1,43 @@
+#!/bin/bash
+
+TOOL_DIR="{{ api_gateway_home }}/posix/bin"
+GROUP=`./get_gateway_group.sh`
+INSTANCE=`./get_gateway_instance.sh`
+BACKUP_DIR="{{ api_gateway_home }}/groups/topologylinks/{{ gateway_group_name }}/$INSTANCE/conf/kps/backup"
+CRON_SH_FILE="{{ script_home }}cron.d/axwayKpsBackup.sh"
+OPT_BACKUP="{{ backup_folder }}kpsbackup"
+#
+#
+# Create backup directory if it does not exist 
+if [ ! -d $OPT_BACKUP ]; then
+   echo Directory $OPT_BACKUP does not exist. Creating it.
+   mkdir -p $OPT_BACKUP
+   if [ ! $? ]; then
+       echo Could not create dir. No rights? Aborting script.
+       exit 1
+   fi
+fi
+#
+rm $CRON_SH_FILE > /dev/null 2>&1 || :
+touch $CRON_SH_FILE
+#
+echo Building axway cron sh file
+# read -p "Press [Enter] key to Delete old backups..." >> $CRON_SH_FILE
+# read -p "Press [Enter] key to Perform cassandra backup ..." >> $CRON_SH_FILE
+# read -p "Press [Enter] key to Delete earlier backup ..." >> $CRON_SH_FILE
+echo "#  Deleting the old backup from the kpsadmin base folder"  >> $CRON_SH_FILE
+echo "find $BACKUP_DIR -type f -mmin +360 -delete" >> $CRON_SH_FILE
+
+echo "#  Runing kps admin utility for performing of the backup"  >> $CRON_SH_FILE
+echo "$TOOL_DIR/kpsadmin --username {{ api_gateway_username }} --password {{ api_gateway_password }} --group {{ gateway_group_name }} --name {{ hostnameShort }} backup"  >> $CRON_SH_FILE
+
+echo "#  Moving previus ziped backup into a achive folder"  >> $CRON_SH_FILE
+echo "mv $OPT_BACKUP/*kpsbackup*.zip $OPT_BACKUP/archive/."  >> $CRON_SH_FILE
+
+echo "#  Delete old ziped backup from the archive folder"  >> $CRON_SH_FILE
+# echo "find $OPT_BACKUP/archive/ -type f -name '*kpsbackup.zip' -mmin +1440 -delete" >> $CRON_SH_FILE
+
+echo "#  Kompressing av moving the backup files from the kps admin folder under instance go backup backup_folder"  >> $CRON_SH_FILE
+echo "zip -j $OPT_BACKUP\$(date +\%Y-\%m-\%dT\%H\%M)-kpsbackup.zip $BACKUP_DIR/*" >> $CRON_SH_FILE
+
+printf "\n" >> $CRON_SH_FILE

@@ -1,0 +1,30 @@
+---
+# ==========================================================================================
+- name: Creates backup directory {{ path_update }}
+  file:
+    path: "{{ api_gateway_home }}{{ app_config_path }}/backup"
+    state: directory
+    mode: '0775'
+  become_user: "{{ appRunUser }}"
+#
+#
+- name: Copy install file og script
+  copy:
+    src: "{{ item }}"
+    dest: "{{ path_update }}"
+    mode: '0777'
+  become_user: "{{ appRunUser }}"
+  with_fileglob:
+     - files/*.sh
+     - files/*.config
+
+- name: Update apps.config command ({{ appRunUser }})-> "{{ path_update }}/copyAppConfig.sh {{ api_gateway_home }} {{ app_config_path }}"
+  command: "{{ path_update }}/copyAppConfig.sh {{ api_gateway_home }} {{ app_config_path }}"
+  become_user: "{{ appRunUser }}"
+  register: standard_output
+  args:
+     chdir: "{{ axway_bin }}"
+
+- name: Output from update app.config
+  debug:
+    msg: "{{ standard_output }}"

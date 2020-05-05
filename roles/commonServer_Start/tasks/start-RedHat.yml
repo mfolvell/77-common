@@ -1,0 +1,12 @@
+# ---
+# ==========================================================================================
+#
+- name: Start nodemanager systemd service
+  systemd:
+    state: started
+    name: axway-nodemanager
+  become_user: "{{ appRunUser }}"
+
+- pause:
+    minutes: 1
+# ==========================================================================================

@@ -1,0 +1,16 @@
+#  Local setting valid for only this environment
+
+api_gateway_username: admin
+api_gateway_password: changeme
+api_manager_username: apiadmin
+api_manager_password: changeme
+api_rnm_password: changeme
+gateway_firstnode: sandbox-gateway01.test.xxx.no
+
+gateway_lisence_name: apiGateway.lic
+manager_lisence_name: apiMgr.lic
+
+localCertUrl: https://localhost:8090
+#
+# AXWAY_PASSWORD_ADMIN=changeme
+# AXWAY_ADMIN_USERNAME=admin

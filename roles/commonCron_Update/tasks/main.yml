@@ -1,0 +1,64 @@
+---
+# ==========================================================================================
+- name: Creates script path ( {{ script_home }} )
+  file:
+    path:  "{{ script_home }}/cron.d"
+    state: directory
+    mode: '0775'
+
+- name: Creates backup folder for kps backup
+  file:
+    path:  "{{ backup_folder }}/kpsbackup/archive"
+    state: directory
+    mode: '0775'
+
+- name: Template a job that creates the crontab sh
+  template:
+    src: ../template/createAxwayCron.sh.j2
+    dest: "{{ path_update }}/createAxwayCron.sh"
+    owner: "{{ appInstallationUser }}"
+    mode: '0777'
+
+- name: Template a updateCron to install
+  template:
+    src: ../template/updateCron.sh.j2
+    dest: "{{ path_update }}/updateCron.sh"
+    owner: bin
+    group: wheel
+    mode: '0777'
+
+- name: Install zip
+  yum:
+      name: zip
+      state: latest
+
+- name: Install unzip
+  yum:
+      name: unzip
+      state: latest
+
+- name: Update Crontab
+  shell: "{{ path_update }}/updateCron.sh"
+  become_user: axway
+  register: standard_output
+  args:
+    chdir: "{{ path_update }}"
+- name: Output from update app.config
+  debug:
+    msg: "{{ standard_output }}"
+
+- name: Create script for backup
+  shell: "{{ path_update }}/createAxwayCron.sh"
+  become_user: axway
+  register: standard_output
+  args:
+    chdir: "{{ path_update }}"
+
+- name: Output from update app.config
+  debug:
+    msg: "{{ standard_output }}"
+#
+- name: Restart service Crontab
+  service:
+    name: crond
+    state: restarted

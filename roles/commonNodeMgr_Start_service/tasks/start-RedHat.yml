@@ -1,0 +1,9 @@
+# ---
+# ==========================================================================================
+#
+- name: Start nodemanager command ({{ appRunUser }}) -> "{{ axway_bin }}/nodemanager -d"
+  command: "{{ axway_bin }}/nodemanager -d"
+  become_user: "{{ appRunUser }}"
+- pause:
+    minutes: 1
+# ==========================================================================================

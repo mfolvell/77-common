@@ -1,0 +1,7 @@
+---
+# ===================================================================
+
+- name: Start service cassandra, if not started
+  service:
+    name: cassandra
+    state: started
