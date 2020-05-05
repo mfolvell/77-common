@@ -16,7 +16,7 @@
   template:
     src: ../template/createAxwayCron.sh.j2
     dest: "{{ path_update }}/createAxwayCron.sh"
-    owner: "{{ appInstallationUser }}"
+    owner: "{{ appRunUser }}"
     mode: '0777'
 
 - name: Template a updateCron to install
