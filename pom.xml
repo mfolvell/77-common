@@ -6,6 +6,6 @@
     <version>1.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>762-commons</name>
+    <name>762-common</name>
     <url>http://maven.apache.org</url>
 </project>
