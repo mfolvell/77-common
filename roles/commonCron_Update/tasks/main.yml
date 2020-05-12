@@ -16,15 +16,14 @@
   template:
     src: ../template/createAxwayCron.sh.j2
     dest: "{{ path_update }}/createAxwayCron.sh"
-    owner: "{{ appInstallationUser }}"
+    owner: "{{ appRunUser }}"
     mode: '0777'
 
 - name: Template a updateCron to install
   template:
     src: ../template/updateCron.sh.j2
     dest: "{{ path_update }}/updateCron.sh"
-    owner: bin
-    group: wheel
+    owner: "{{ appRunUser }}"
     mode: '0777'
 
 - name: Install zip
@@ -39,7 +38,8 @@
 
 - name: Update Crontab
   shell: "{{ path_update }}/updateCron.sh"
-  become_user: axway
+  become: yes
+  become_user: "{{ appInstallationUser }}"
   register: standard_output
   args:
     chdir: "{{ path_update }}"
@@ -49,7 +49,7 @@
 
 - name: Create script for backup
   shell: "{{ path_update }}/createAxwayCron.sh"
-  become_user: axway
+  become_user: "{{ appInstallationUser }}"
   register: standard_output
   args:
     chdir: "{{ path_update }}"
