@@ -9,6 +9,7 @@
 - name: Creates backup folder for kps backup
   file:
     path:  "{{ backup_folder }}/kpsbackup/archive"
+    owner: "{{ appRunUser }}"
     state: directory
     mode: '0775'
 
