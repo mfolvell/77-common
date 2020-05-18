@@ -5,7 +5,7 @@ echo "TOOL_DIR=$TOOL_DIR"
 
 CRON_DIR=/etc/cron.d
 CRON_FILE=$CRON_DIR/axwayKpsBackup
-BACKUP_CRON="0 * * * * axway {{ script_home }}cron.d/axwayKpsBackup.sh"
+BACKUP_CRON="0 * * * * axway sh {{ script_home }}cron.d/axwayKpsBackup.sh"
 echo "BACKUP_CRON=$BACKUP_CRON"
 #
 rm /var/spool/cron/axway > /dev/null 2>&1 || :
