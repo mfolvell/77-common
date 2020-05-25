@@ -50,14 +50,17 @@ env.local.instance=¤¤inst¤¤
 # Chache rmiURL
 env.cache.rmiURL=//{{ inventory_hostname }}:40001/accessToken-rmt|//{{ inventory_hostname }}:40001/accessToken-sstKey|//{{ inventory_hostname }}:40001/AuthZCode-sstKey|//{{ inventory_hostname }}:40001/AuthZCode-oldAccessToken|//{{ inventory_hostname }}:40001/AuthZCode-finInst|//{{ inventory_hostname }}:40001/AuthZCode-financialAgreement|//{{ inventory_hostname }}:40001/accessToken-finInst|//{{ inventory_hostname }}:40001/accessToken-financialAgreement|//{{ inventory_hostname }}:40001/authenticationSubjectId-accessTokens
 
+## host envProperties
+rmi_peer = {{ rmi_peer }}
+
 # Analytics Database properties
 env.analytics.dburl={{ analytics_dburl }}
 env.analytics.dbuser={{ analytics_dbuser }}
 env.analytics.dbpassword={{ analytics_dbpassword }}
 
 # Api portal username and password (for accessing KPS data from policies)
-env.apiportal.username={{ api_manager_username  }}
-env.apiportal.password={{ api_manager_password }}
+env.apiportal.username={{ api_portal_username  }}
+env.apiportal.password={{ api_portal_password }}
 
 # API Gateway Admin username and Password
 env.apigw.username={{ api_gateway_username }}
