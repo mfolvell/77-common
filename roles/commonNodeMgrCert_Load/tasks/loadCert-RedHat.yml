@@ -29,7 +29,7 @@
 #      - files/certs/*.sh
 # ==========================================================================================
 # - name: Update sertificates on localhost command ({{ appRunUser }}) -> "./run.sh certs/addCertsFromSSL.py -g {{ gateway_group_name }} -n {{ hostnameShort }} -u {{ api_gateway_username }} -p {{ api_gateway_password }} --certURL={{ localCertUrl }}"
-- name: Update "{{ api_gateway_home }}/samples/scripts" -> "./run.sh ./certs/addCertsFromSSL.py -g {{ gateway_group_name }} -n {{ hostnameShort }} -u {{ api_gateway_username }} -p {{ api_gateway_password }} --certURL={{ localCertUrl }}"
+- name: Update lokal certs-> "{{ path_update }}/loadCerts.sh"
   command: "{{ path_update }}/loadCerts.sh"
   become_user: "{{ appRunUser }}"
   register: output
