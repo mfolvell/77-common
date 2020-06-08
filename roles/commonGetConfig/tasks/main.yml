@@ -1,5 +1,11 @@
 ---
 # ==========================================================================================
+- name: Delete installasjon folder
+  file:
+    state: absent
+    owner: "{{ appRunUser }}"
+    path: "{{ path_update }}/"
+
 - name: Creates directory {{ path_update }}
   file:
     path: "{{ path_update }}"
