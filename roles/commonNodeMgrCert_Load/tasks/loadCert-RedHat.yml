@@ -7,28 +7,7 @@
     owner: "{{ appRunUser }}"
     mode: '0777'
 
-# Update of local firewall on server to open up nessesary nettwork ports
-# - name: Copy files scripts
-#   copy:
-#     src: "{{ item }}"
-#     dest: "{{ api_gateway_home }}/samples/scripts/"
-#     mode: '0777'
-#   become_user: "{{ appRunUser }}"
-#   with_fileglob:
-#      - files/*.py
-#      - files/*.sh
-# # ==========================================================================================
-# - name: Copy files certs scripts
-#   copy:
-#     src: "{{ item }}"
-#     dest: "{{ api_gateway_home }}/samples/scripts/certs/"
-#     mode: '0777'
-#   become_user: "{{ appRunUser }}"
-#   with_fileglob:
-#      - files/certs/*.py
-#      - files/certs/*.sh
 # ==========================================================================================
-# - name: Update sertificates on localhost command ({{ appRunUser }}) -> "./run.sh certs/addCertsFromSSL.py -g {{ gateway_group_name }} -n {{ hostnameShort }} -u {{ api_gateway_username }} -p {{ api_gateway_password }} --certURL={{ localCertUrl }}"
 - name: Update lokal certs-> "{{ path_update }}/loadCerts.sh"
   command: "{{ path_update }}/loadCerts.sh"
   become_user: "{{ appRunUser }}"
