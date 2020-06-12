@@ -1,4 +1,3 @@
-
 # This file is read when the server starts up. If a server configuration contains a value in the format
 # ${env.X}, where X is any string (for example, MyCustomSetting), this file MUST contain an equivalent
 # name-value pair of env.MyCustomSetting=MyCustomValue.
@@ -42,7 +41,7 @@ env.PORT.APIPORTAL=8075
 env.PORT.PORTAL.TRAFFIC=8065
 
 # Hostname
-env.EHCACHE.HOSTNAME={{ inventory_hostname  }}
+env.EHCACHE.HOSTNAME={{ inventory_hostname }}
 
 # Instance Number
 env.local.instance=¤¤inst¤¤
