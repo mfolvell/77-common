@@ -5,10 +5,10 @@ GROUP=`./get_gateway_group.sh`
 INSTANCE=`./get_gateway_instance.sh`
 BACKUP_DIR="{{ api_gateway_home }}/groups/topologylinks/{{ gateway_group_name }}/$INSTANCE/conf/kps/backup"
 CRON_SH_FILE="{{ script_home }}cron.d/axwayKpsBackup.sh"
-OPT_BACKUP="{{ backup_folder }}kpsbackup"
+OPT_BACKUP="{{ backup_folder }}/kpsbackup"
 #
 #
-# Create backup directory if it does not exist 
+# Create backup directory if it does not exist
 if [ ! -d $OPT_BACKUP ]; then
    echo Directory $OPT_BACKUP does not exist. Creating it.
    mkdir -p $OPT_BACKUP
