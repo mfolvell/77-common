@@ -35,7 +35,8 @@ echo "#  Moving previus ziped backup into a achive folder"  >> $CRON_SH_FILE
 echo "mv $OPT_BACKUP/*kpsbackup*.zip $OPT_BACKUP/archive/."  >> $CRON_SH_FILE
 
 echo "#  Delete old ziped backup from the archive folder"  >> $CRON_SH_FILE
-echo "find $OPT_BACKUP/archive/ -type f -name '*kpsbackup.zip' -mmin +1440 -delete" >> $CRON_SH_FILE
+echo "cd $OPT_BACKUP/archive" >> $CRON_SH_FILE
+echo "find . -type f -name '*kpsbackup.zip' -mmin +1440 -delete" >> $CRON_SH_FILE
 
 echo "#  Kompressing av moving the backup files from the kps admin folder under instance go backup backup_folder"  >> $CRON_SH_FILE
 echo "zip -j $OPT_BACKUP\$(date +\%Y-\%m-\%dT\%H\%M)-kpsbackup.zip $BACKUP_DIR/*" >> $CRON_SH_FILE
