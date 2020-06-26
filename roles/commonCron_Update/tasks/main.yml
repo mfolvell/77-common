@@ -12,8 +12,8 @@
     owner: "{{ appRunUser }}"
     state: directory
     mode: '0775'
-    
-- name: Change ownership "{{ backup_folder }}/kpsbackup"
+
+- name: Change ownership "{{ backup_folder }}kpsbackup"
   file:
     path: "{{ backup_folder }}/kpsbackup"
     owner: "{{ appRunUser }}"
