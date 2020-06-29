@@ -22,9 +22,6 @@ rm $CRON_SH_FILE > /dev/null 2>&1 || :
 touch $CRON_SH_FILE
 #
 echo Building axway cron sh file
-# read -p "Press [Enter] key to Delete old backups..." >> $CRON_SH_FILE
-# read -p "Press [Enter] key to Perform cassandra backup ..." >> $CRON_SH_FILE
-# read -p "Press [Enter] key to Delete earlier backup ..." >> $CRON_SH_FILE
 echo "#  Deleting the old backup from the kpsadmin base folder"  >> $CRON_SH_FILE
 echo "find $BACKUP_DIR -type f -mmin +360 -delete" >> $CRON_SH_FILE
 
