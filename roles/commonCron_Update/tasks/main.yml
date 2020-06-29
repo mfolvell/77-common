@@ -13,6 +13,14 @@
     state: directory
     mode: '0775'
 
+- name: Change ownership "{{ backup_folder }}kpsbackup"
+  file:
+    path: "{{ backup_folder }}/kpsbackup"
+    owner: "{{ appRunUser }}"
+    group: axway
+    mode: '0777'
+    recurse: yes
+
 - name: Template a job that creates the crontab sh
   template:
     src: ../template/createAxwayCron.sh.j2
