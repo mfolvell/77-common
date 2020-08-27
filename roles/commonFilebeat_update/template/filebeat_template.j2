@@ -1,0 +1,72 @@
+filebeat.inputs:
+- paths:
+    - /opt/Axway*/apigateway/groups/group*/instance*/trace/*.trc
+
+  encoding: utf-8
+  fields:
+      "type": axwayjson
+      "log_type": apigw_trace_instance
+      "app_name": "axway"
+  include_lines: ['^INFO.*\[.*\]\s*\"', '^ERROR.*\[.*\]\s*\"', '^FATAL.*\[.*\]\s*\"', '^DEGUG.*\[.*\]\s*\"' ]
+
+- paths:
+    - /opt/Axway-*/apigateway/trace/*
+
+  encoding: utf-8
+  fields:
+      "type": axwayjson
+      "log_type": apigw_trace_nodemanager
+      "app_name": "axway"
+  include_lines: ['^INFO.*\[.*\]\s*\"', '^ERROR.*\[.*\]\s*\"', '^FATAL.*\[.*\]\s*\"', '^DEGUG.*\[.*\]\s*\"', '^DATA.*\[.*\]\s*\"']
+
+- paths:
+    - /opt/Axway-*/apigateway/groups/group-*/instance-*/logs/audit.log*
+
+  encoding: utf-8
+  fields:
+      "type": axwayjson
+      "log_type": apigw_audit
+      "app_name": "axway"
+  json.keys_under_root: true
+  json.add_error_key: true
+
+- paths:
+    - /opt/Axway-*/apigateway/logs/audit.log*
+
+  encoding: utf-8
+  fields:
+      "type": axwayjson
+      "log_type": apigw_audit
+      "app_name": "axway"
+
+  json.keys_under_root: true
+  json.add_error_key: true
+
+- paths:
+    - /var/log/apigateway/events/*.log
+
+  encoding: utf-8
+  fields:
+      "type": axwayjson
+      "log_type": apigw_events
+      "app_name": "axway"
+
+  json.keys_under_root: true
+  json.add_error_key: true
+
+- paths:
+    - /var/log/apigateway/auditxml/transactionLog.xml*
+
+  encoding: utf-8
+  fields:
+      "type": axwayjson
+      "log_type": apigw_transactions
+      "app_name": "axway"
+
+
+output.elasticsearch:
+  hosts: ["https://humio-ingest.prod-int.sparebank1.no:443/api/v1/ingest/elastic-bulk"]
+  username: {{ filebeat_username }}
+  compression_level: 5
+  bulk_max_size: 200
+  worker: 1

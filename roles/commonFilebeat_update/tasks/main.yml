@@ -1,0 +1,19 @@
+- name: Ensure that Filebeat is installed
+  yum:
+    name: filebeat
+    state: latest
+    update_cache: true
+  become: true
+
+- name: Create filebeat-config from template
+  template:
+    src: template/filebeat_template.j2
+    dest: /etc/filebeat/filebeat.yml
+    mode: '0755'
+
+- name: Start Filebeat with configuration
+  service:
+    name: filebeat
+    state: restarted
+    enabled: yes
+  become: true
