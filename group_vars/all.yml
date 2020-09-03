@@ -1,12 +1,14 @@
 # miljøuavhengige variabler
 AxwayBasePath: /opt/Axway-7.6.2
-api_gateway_home: "{{ AxwayBasePath }}/apigateway"
+AxwayBasePath_753: /opt/Axway-7.5.3
+yapi_gateway_home: "{{ AxwayBasePath }}/apigateway"
 axway_bin: "{{ AxwayBasePath }}/apigateway/posix/bin"
 path_update: "{{ AxwayBasePath }}/apigateway/install"
 axway_licence_path: "{{ AxwayBasePath }}/apigateway/conf/licenses"
 firewall_conf_path: "{{ AxwayBasePath }}"
-installer_url: http://ks.prod-int.sparebank1.no//storefiler/APIGateway_7.6.2_Install_linux-x86-64_BN5.run
 installer_name: APIGateway_7.6.2_Install_linux-x86-64_BN5.run
+installer_url: http://ks.prod-int.sparebank1.no//storefiler/axway{{ installer_name }}
+
 crontab_path: /etc/cron.d
 serviceSystemd_path: /etc/systemd/system
 serviceFolder: /etc/init.d
@@ -15,6 +17,7 @@ serviceFolder: /etc/init.d
 first_node_manager_long: 1
 
 # Cassandra
+old_cassandra_dir: /opt/cassandra
 cassandra_dir: /opt/cassandra-2212/cassandra
 
 git_lisence_version: 762
