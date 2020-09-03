@@ -1,0 +1,11 @@
+[gatewayservers]
+sandbox-gateway01.dmz-ext.sparebank1.no
+sandbox-gateway02.dmz-ext.sparebank1.no
+
+[cassandraservers]
+sandbox-cassandra01.dmz-ext.sparebank1.no
+sandbox-cassandra02.dmz-ext.sparebank1.no
+
+[apiportalservers]
+sandbox-portal01.dmz-ext.sparebank1.no
+sandbox-portal02.dmz-ext.sparebank1.no

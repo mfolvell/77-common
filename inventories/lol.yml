@@ -1,0 +1,40 @@
+test:
+  children:
+    lol:
+      children:
+        admin01:
+          hosts:
+            lol-apigw-admin01.test.sparebank1.no:
+              axwaytype: domainAdmin
+              hostnameShort: lol-apigw-admin01
+              anmHost:
+              gateway_group_name: gr1
+              rmi_peer: lol-apigw-admin02.test.sparebank1.no:40001
+        apigw01:
+          hosts:
+            lol-apigw01.test.sparebank1.no:
+              axwaytype: admin
+              hostnameShort: lol-apigw01
+              anmHost: lol-apigw-admin01.test.sparebank1.no
+              gateway_group_name: gr1
+              rmi_peer: lol-apigw02.test.sparebank1.no:40001
+        admin02:
+          hosts:
+            lol-apigw-admin02.test.sparebank1.no:
+              axwaytype: admin
+              hostnameShort: lol-apigw-admin02
+              anmHost: lol-apigw-admin01.test.sparebank1.no
+              gateway_group_name: gr2
+              rmi_peer: lol-apigw-admin01.test.sparebank1.no:40001
+        apigw02:
+          hosts:
+            lol-apigw02.test.sparebank1.no:
+              axwaytype: admin
+              hostnameShort: lol-apigw02
+              anmHost: lol-apigw-admin02.test.sparebank1.no
+              gateway_group_name: gr2
+              rmi_peer: lol-apigw01.test.sparebank1.no:40001
+        adminservers:
+          hosts:
+            lol-apigw-admin01.test.sparebank1.no:
+            lol-apigw-admin02.test.sparebank1.no:

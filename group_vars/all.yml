@@ -1,0 +1,35 @@
+# miljøuavhengige variabler
+AxwayBasePath: /opt/Axway-7.6.2
+api_gateway_home: "{{ AxwayBasePath }}/apigateway"
+axway_bin: "{{ AxwayBasePath }}/apigateway/posix/bin"
+path_update: "{{ AxwayBasePath }}/apigateway/install"
+axway_licence_path: "{{ AxwayBasePath }}/apigateway/conf/licenses"
+firewall_conf_path: "{{ AxwayBasePath }}"
+installer_url: http://ks.prod-int.sparebank1.no//storefiler/APIGateway_7.6.2_Install_linux-x86-64_BN5.run
+installer_name: APIGateway_7.6.2_Install_linux-x86-64_BN5.run
+crontab_path: /etc/cron.d
+serviceSystemd_path: /etc/systemd/system
+serviceFolder: /etc/init.d
+
+# API Gateway
+first_node_manager_long: 1
+
+# Cassandra
+cassandra_dir: /opt/cassandra-2212/cassandra
+
+git_lisence_version: 762
+git_localFolder: localGitFolder
+
+fed_file_name: Axway762-20200225-InitialDeployFromTest.fed
+
+script_home: /opt/SB1Script/
+script_log: /var/log/SB1Script/reorg_cass_rmt/
+axway_log: /var/log/apigateway
+
+backup_folder: /opt/backup/
+
+#   https://stash.intern.sparebank1.no/projects/AXWAY/repos/axway-licenses/browse/
+# git_repo:762/lol/lol-apigw-admin01.test.sparebank1.no.apiportal.lic
+
+appInstallationUser: root
+appRunUser: axway
