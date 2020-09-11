@@ -4,5 +4,5 @@
   systemd:
     state: started
     name: axway-instance
-  become_user: "{{ appRunUser }}"
+  become: True
 # ==========================================================================================

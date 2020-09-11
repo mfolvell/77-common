@@ -1,0 +1,36 @@
+#  Local setting valid for only this environment
+
+api_gateway_username: admin
+api_gateway_password: changeme
+api_manager_username: apiadmin
+api_manager_password: changeme
+api_portal_username: apiadmin
+api_portal_password: changeme
+
+gateway_firstnode: sandbox-gateway01.test.xxx.no
+
+gateway_lisence_name: apiGateway.lic
+manager_lisence_name: apiMgr.lic
+#
+# AXWAY_PASSWORD_ADMIN=changeme
+# AXWAY_ADMIN_USERNAME=admin
+
+cassandraClusterName: 'API GW TEST'
+
+smtp_server_hostname: neptun.test.sparebank1.no
+testdata_provisioner_basepath: https://sandbox-testdata-provisioner.test.sparebank1.no
+
+zabbixServerGroupDesc: sandbox-admin01.test, apigw-admin01.test
+displayAnsibleMessages: false
+
+kps_prefix: d2c94c7e_fa37_4925_9cb7_32c3500e21f6
+# Cassandra parameter
+# cassandra753BackupServer: sandbox-cassandra01.qa.sparebank1.no
+
+cassandra01: sandbox-cassandra01.test.sparebank1.no
+cassandra02: sandbox-cassandra02.test.sparebank1.no
+cassandra03: sandbox-cassandra03.test.sparebank1.no
+cass_cluster_name: API GW TEST
+cass_seed_pro_class_name: org.apache.cassandra.locator.SimpleSeedProvider
+cass_authenticator: AllowAllAuthenticator
+cass_authorizer: AllowAllAuthorizer
