@@ -1,0 +1,56 @@
+# miljøuavhengige variabler
+# 752
+
+AxwayBasePath_753: /opt/Axway-7.5.3
+api_gateway_home_753: "{{ AxwayBasePath_753 }}/apigateway"
+axway_bin_753: "{{ AxwayBasePath_753 }}/apigateway/posix/bin"
+path_update_753: "{{ AxwayBasePath_753 }}/apigateway/install"
+axway_licence_path_753: "{{ AxwayBasePath_753 }}/apigateway/conf/licenses"
+firewall_conf_path_753: "{{ AxwayBasePath_753 }}"
+installer_name_753: APIGateway_7.5.3_Install_linux-x86-64_BN8.run
+installer_url_753: http://ks.prod-int.sparebank1.no//storefiler/{{ installer_name_753 }}
+
+# 762
+AxwayBasePath_762: /opt/Axway-7.6.2
+api_gateway_home_762: "{{ AxwayBasePath_762 }}/apigateway"
+axway_bin_762: "{{ AxwayBasePath_762 }}/apigateway/posix/bin"
+path_update_762: "{{ AxwayBasePath_762 }}/apigateway/install"
+axway_licence_path_762: "{{ AxwayBasePath_762 }}/apigateway/conf/licenses"
+firewall_conf_path_762: "{{ AxwayBasePath_762 }}"
+installer_name_762: APIGateway_7.6.2_Install_linux-x86-64_BN5.run
+installer_url_762: http://ks.prod-int.sparebank1.no//storefiler/{{ installer_name_762 }}
+
+# ========================================================
+
+app_config_path: /webapps/apiportal/vordel/apiportal/app/
+crontab_path: /etc/cron.d
+serviceSystemd_path: /etc/systemd/system
+serviceFolder: /etc/init.d
+
+# API Gateway
+first_node_manager_long: 1
+
+# Cassandra
+cassandra_dir_2208: /opt/cassandra
+cassandra_dir_2212 : /opt/cassandra-2212
+cassandra_2212_rpm: apigw-cass-upgrade-lol-1.0.0-0.noarch.rpm
+cassandra_jdk: /usr/lib/jvm/jre
+
+#
+# # git_lisence_version: 762
+# git_localFolder: localGitFolder
+
+# fed_file_name: Axway762-20200225-InitialDeployFromTest.fed
+
+script_home: /opt/SB1Script/
+script_log: /var/log/SB1Script/reorg_cass_rmt/
+axway_log: /var/log/apigateway
+
+backup_folder: /opt/backup/
+
+#   https://stash.intern.sparebank1.no/projects/AXWAY/repos/axway-licenses/browse/
+# git_repo:762/lol/lol-apigw-admin01.test.sparebank1.no.apiportal.lic
+
+appInstallationUser: root
+appRunUser: axway
+appCassandraUser: cassandra

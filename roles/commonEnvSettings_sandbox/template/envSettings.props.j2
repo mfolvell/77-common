@@ -1,0 +1,107 @@
+# This file is read when the server starts up. If a server configuration contains a value in the format
+# ${env.X}, where X is any string (for example, MyCustomSetting), this file MUST contain an equivalent
+# name-value pair of env.MyCustomSetting=MyCustomValue.
+# When the server starts up, every occurrence of env.MyCustomSetting is expanded to the value of MyCustomValue.
+# For example, by default the port in the server configuration is set to ${env.PORT.TRAFFIC}, specifying a name-value
+# pair of env.PORT.TRAFFIC=8080 results in the server opening up port 8080 at start up.
+
+# An example of how you might bind a reference to a host-specific certificate to a given deployment. The
+# SSL X509 Certificate in the 'SSL Interface' configuration item can then reference it using the binding
+# variable '${env.serverCertificate}'
+#env.serverCertificate=${system.prefix.cert}CN=MYHOST
+
+# the default port which the Instance listens on for HTTP traffic
+env.PORT.TRAFFIC=8080
+
+# the default port which the Instance listens on for management/configuration HTTP traffic
+env.PORT.MANAGEMENT=8085
+
+# the default port which the Instance listens on for sample messages
+env.PORT.SAMPLE.SERVICES=8081
+
+# the hostname of the OAuth Server defaults to localhost
+env.OAUTH.SERVER=localhost
+
+# the default port which OAuth 2.0 Services listen on for traffic
+env.PORT.OAUTH2.SERVICES=8089
+
+# the hostname of the OAuth Client defaults to localhost
+env.OAUTH.CLIENT=localhost
+
+# the default port which OAuth 2.0 Client Services listen on for traffic
+env.PORT.OAUTH2.CLIENT=8088
+
+# the default AMA broker port
+env.BROKER.PORT=61616
+
+# API Portal Port
+env.PORT.APIPORTAL=8075
+
+# API Portal Traffic Port
+env.PORT.PORTAL.TRAFFIC=8065
+
+# This file is read when the server starts up. If a server configuration contains a value in the format
+# ${env.X}, where X is any string (for example, MyCustomSetting), this file MUST contain an equivalent
+# name-value pair of env.MyCustomSetting=MyCustomValue.
+# When the server starts up, every occurrence of env.MyCustomSetting is expanded to the value of MyCustomValue.
+# For example, by default the port in the server configuration is set to ${env.PORT.TRAFFIC}, specifying a name-value
+# pair of env.PORT.TRAFFIC=8080 results in the server opening up port 8080 at start up.
+
+# An example of how you might bind a reference to a host-specific certificate to a given deployment. The
+# SSL X509 Certificate in the 'SSL Interface' configuration item can then reference it using the binding
+# variable '${env.serverCertificate}'
+#env.serverCertificate=${system.prefix.cert}CN=MYHOST
+
+# the default port which the Instance listens on for HTTP traffic
+env.PORT.TRAFFIC=8080
+
+# the default port which the Instance listens on for management/configuration HTTP traffic
+env.PORT.MANAGEMENT=8085
+
+# the default port which the Instance listens on for sample messages
+env.PORT.SAMPLE.SERVICES=8081
+
+# the hostname of the OAuth Server defaults to localhost
+env.OAUTH.SERVER=localhost
+
+# the default port which OAuth 2.0 Services listen on for traffic
+env.PORT.OAUTH2.SERVICES=8089
+
+# the hostname of the OAuth Client defaults to localhost
+env.OAUTH.CLIENT=localhost
+
+# the default port which OAuth 2.0 Client Services listen on for traffic
+env.PORT.OAUTH2.CLIENT=8088
+
+# the default AMA broker port
+env.BROKER.PORT=61616
+
+# API Portal Port
+env.PORT.APIPORTAL=8075
+
+# API Portal Traffic Port
+env.PORT.PORTAL.TRAFFIC=8065
+
+# Instance Number
+env.local.instance=instance-1
+
+# Api portal username and password (for accessing KPS data from policies)
+env.apiportal.username={{ api_portal_username  }}
+env.apiportal.password={{ api_portal_password }}
+
+# API Gateway Admin username and Password
+env.apigw.username={{ api_gateway_username }}
+env.apigw.password={{ api_gateway_password }}
+
+# SMTP Server Settings
+env.smtp.server.hostname={{ smtp_server_hostname }}
+env.smtp.server.port=25
+
+#Global HTTP header incoming whitelist
+env.http.header.incoming.whitelist=Accept,Accept-Charset,Accept-Encoding,Accept-Language,Accept-Datetime,Authorization,Cache-Control,Connection,Cookie,Content-Length,Content-Type,Date,Forwarded,From,Host,Location,Origin,Pragma,Referer,User-Agent,Upgrade,Via,Warning,X-Forwarded-For,X-Forwarded-Host,X-Forwarded-Proto,AppKey,sst,rmt,financial_institution_id,financial_agreement_id,useAutomaticConsentScreen,ssn,rmt_expiration_date_time,agreement_ids
+
+# Global HTTP header outgoing whitelist
+env.http.header.outgoing.whitelist=Access-Control-Allow-Origin,Accept-Patch,Accept-Ranges,Allow,Alt-Svc,Cache-Control,Connection,Content-Disposition,Content-Encoding,Content-Language,Content-Length,Content-Location,Content-Range,Content-Type,Date,ETag,Expires,Last-Modified,Link,Location,Pragma,Proxy-Authenticate,Public-Key-Pins,Refresh,Retry-After,Server,Set-Cookie,Status,Strict-Transport-Security,Trailer,Transfer-Encoding,TSV,Upgrade,Vary,Warning,WWW-Authenticate,X-Correlation-ID,ConsentScreen,Status
+
+# Integration URLs
+env.testdata.provisioner.basepath={{ testdata_provisioner_basepath }}

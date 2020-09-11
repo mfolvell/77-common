@@ -1,0 +1,24 @@
+sandboxTest:
+  children:
+      admin01:
+          hosts:
+            sandbox-gateway03.test.sparebank1.no:
+              axwaytype: domainAdmin
+              hostnameShort: sandbox-gateway03
+              anmHost:
+              gateway_group_name: sb1
+              rmi_peer:
+      apigw01:
+          hosts:
+            sandbox-gateway04.test.sparebank1.no:
+              axwaytype: admin
+              hostnameShort: sandbox-gateway04
+              anmHost: sandbox-gateway03.test.sparebank1.no
+              gateway_group_name: sb1
+              rmi_peer:
+      cassandraservers:
+          hosts:
+            sandbox-cassandra02.test.sparebank1.no:
+      cassandra2208:
+          hosts:
+            sandbox-cassandra01.test.sparebank1.no:

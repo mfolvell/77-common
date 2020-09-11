@@ -1,0 +1,57 @@
+---
+# ==========================================================================================
+- name: Copy install file og script
+  copy:
+    src: "{{ item }}"
+    dest: "{{ path_update }}"
+    mode: '0777'
+  become_user: "{{ appRunUser }}"
+  with_fileglob:
+     - files/*.sh
+
+- name: Set variable for gr1 - Test
+  set_fact:
+     cassandra_env01: apigw-cass01
+     cassandra_env02: apigw-cass03
+     cassandra_env03: apigw-cass05
+  when: (gateway_group_name == "gr1") and (env  == "test" or env  == "qa" or env  == "prod")
+
+- name: Set variable for gr2
+  set_fact:
+     cassandra_env01: apigw-cass02
+     cassandra_env02: apigw-cass04
+     cassandra_env03: apigw-cass06
+  when: (gateway_group_name == "gr2") and (env  == "test" or env  == "qa" or env  == "prod")
+
+- name: Set variable for lol gr1
+  set_fact:
+     cassandra_env01: lol-apigw-cass01
+     cassandra_env02: lol-apigw-cass03
+     cassandra_env03: lol-apigw-cass05
+  when: (gateway_group_name == "gr1") and (env  == "lol")
+
+- name: Set variable for lol gr2
+  set_fact:
+     cassandra_env01: lol-apigw-cass02
+     cassandra_env02: lol-apigw-cass04
+     cassandra_env03: lol-apigw-cass06
+  when: (gateway_group_name == "gr2") and (env == "lol")
+
+- name: Template a file to {{ path_update }}/envSettings.props
+  template:
+    src: ./template/envSettings.props.j2
+    dest: "{{ path_update }}/envSettings.props"
+    owner: "{{ appRunUser }}"
+    group: wheel
+    mode: '0644'
+
+# - name: Copy envSettings to instance - config
+- name: Copy command -> ({{ appRunUser }}) "{{ path_update }}/copyEnvSettings.sh {{ gateway_group_name }} {{ path_update }} {{ api_gateway_home }} {{ hostnameShort }}"
+  command: "{{ path_update }}/copyEnvSettings.sh {{ gateway_group_name }} {{ path_update }} {{ api_gateway_home }} {{ hostnameShort }}"
+  become_user: "{{ appRunUser }}"
+  register: standard_output
+  args:
+      chdir: "{{ path_update }}"
+
+- debug:
+      var: standard_output.stdout_lines

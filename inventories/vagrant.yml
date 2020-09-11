@@ -1,0 +1,19 @@
+test:
+  children:
+    vagrant:
+      children:
+        admin-gr1:
+          hosts:
+            192.168.75.101:
+              axwaytype: domainAdmin
+              hostnameShort: sandbox-gateway01
+              gateway_group_name: gr1
+              anmHost:
+              rmi_peer: 192.168.76.210:40001
+              ansible_ssh_user: ansible
+              ansible_ssh_pass: ansible
+        cassandraservers:
+          hosts:
+            192.168.762.101:
+              ansible_ssh_user: ansible
+              ansible_ssh_pass: ansible
