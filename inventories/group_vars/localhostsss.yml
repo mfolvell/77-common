@@ -1,0 +1,7 @@
+# Felles verdier
+bigFileServer: http://ks.prod-int.sparebank1.no/storefiler
+
+#  policystudio for 762 sp5
+
+policystudio_762sp5_path: ~/Axway-7.6.2-SP5
+policystudio_762sp5_download: {{ bigFileServer }}/axway/APIGateway_7.6.2_SP5_PolicyStudio_linux-x86-64_BN20200717.tar.gz

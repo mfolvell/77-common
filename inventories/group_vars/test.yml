@@ -7,7 +7,6 @@ api_portal_password: changeme
 gateway_lisence_name: apiGateway.lic
 manager_lisence_name: apiMgr.lic
 
-localCertUrl: https://localhost:8090
 # Envsettings.props fields with overrides
 # Chache rmiURL
 

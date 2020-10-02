@@ -1,24 +1,36 @@
 sandboxTest:
   children:
-      admin01:
-          hosts:
-            sandbox-gateway03.test.sparebank1.no:
-              axwaytype: domainAdmin
-              hostnameShort: sandbox-gateway03
-              anmHost:
-              gateway_group_name: sb1
-              rmi_peer:
-      apigw01:
-          hosts:
-            sandbox-gateway04.test.sparebank1.no:
-              axwaytype: admin
-              hostnameShort: sandbox-gateway04
-              anmHost: sandbox-gateway03.test.sparebank1.no
-              gateway_group_name: sb1
-              rmi_peer:
+      gatewayservers:
+        children:
+          admin01:
+            hosts:
+              sandbox-gateway01.test.sparebank1.no:
+                axwaytype: domainAdmin
+                hostnameShort: sandbox-gateway01
+                anmHost:
+                gateway_group_name: sb1
+                rmi_peer:
+                hap_srvnavn:
+          apigw01:
+            hosts:
+              sandbox-gateway02.test.sparebank1.no:
+                axwaytype: admin
+                hostnameShort: sandbox-gateway02
+                anmHost: sandbox-gateway01.test.sparebank1.no
+                gateway_group_name: sb1
+                rmi_peer:
+                hap_srvnavn:
       cassandraservers:
-          hosts:
-            sandbox-cassandra02.test.sparebank1.no:
-      cassandra2208:
-          hosts:
-            sandbox-cassandra01.test.sparebank1.no:
+        hosts:
+          sandbox-cassandra01.test.sparebank1.no:
+            cass_hostnameShort: sandbox-cassandra01
+            cass_seeds:  sandbox-cassandra01.test.sparebank1.no
+          sandbox-cassandra02.test.sparebank1.no:
+            cass_seeds:  sandbox-cassandra01.test.sparebank1.no
+            cass_hostnameShort: sandbox-cassandra02
+          sandbox-cassandra03.test.sparebank1.no:
+            cass_hostnameShort: sandbox-cassandra03
+            cass_seeds:  sandbox-cassandra01.test.sparebank1.no
+      portalservers:
+        hosts:
+          sandbox-portal02.test.sparebank1.no:

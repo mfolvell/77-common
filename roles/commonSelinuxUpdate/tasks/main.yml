@@ -1,0 +1,4 @@
+---
+# ==========================================================================================
+#  Installasjon og oppsett av Axway Gateway og manager 762
+-  include_tasks : "commonSelinuxUpdate-{{ ansible_distribution }}.yml"

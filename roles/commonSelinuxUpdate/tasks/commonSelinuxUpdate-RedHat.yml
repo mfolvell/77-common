@@ -1,0 +1,27 @@
+---
+# ==========================================================================================
+- name: Put SELinux in enforcing mode
+  selinux:
+    policy: targeted
+    state: enforcing
+  when: SetSelinuxState == "enforcing"
+
+- name: Put SELinux in permissive mode
+  selinux:
+    policy: targeted
+    state: permissive
+  when: SetSelinuxState == "permissive"
+
+- name: Disable SELinux
+  selinux:
+    state: disabled
+  when: SetSelinuxState == "disabled"
+
+- name: Reboot a slow machine that might have lots of updates to apply
+  reboot:
+    pre_reboot_delay: 0
+    reboot_timeout: 120
+    reboot_timeout: 3600
+  register: standard_output
+- debug:
+    var: standard_output
