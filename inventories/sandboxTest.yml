@@ -25,12 +25,15 @@ sandboxTest:
           sandbox-cassandra01.test.sparebank1.no:
             cass_hostnameShort: sandbox-cassandra01
             cass_seeds:  sandbox-cassandra01.test.sparebank1.no
+            cassandra753BackupServer: sandbox-cassandra01.qa.sparebank1.no
           sandbox-cassandra02.test.sparebank1.no:
             cass_seeds:  sandbox-cassandra01.test.sparebank1.no
             cass_hostnameShort: sandbox-cassandra02
+            cassandra753BackupServer: sandbox-cassandra02.qa.sparebank1.no
           sandbox-cassandra03.test.sparebank1.no:
             cass_hostnameShort: sandbox-cassandra03
             cass_seeds:  sandbox-cassandra01.test.sparebank1.no
+            cassandra753BackupServer: sandbox-cassandra03.qa.sparebank1.no
       portalservers:
         hosts:
           sandbox-portal02.test.sparebank1.no:
