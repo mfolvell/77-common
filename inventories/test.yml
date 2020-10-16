@@ -1,0 +1,52 @@
+qa:
+  children:
+    admin01:
+      hosts:
+        apigw-admin01.test.sparebank1.no:
+          axwaytype: domainAdmin
+          hostnameShort: apigw-admin01
+          anmHost:
+          gateway_group_name: gr1
+          rmi_peer: apigw-admin02.test.sparebank1.no:40001
+    apigw01:
+      hosts:
+        apigw03.qa.sparebank1.no:
+          axwaytype: admin
+          hostnameShort: apigw03
+          anmHost: apigw-admin03.qa.sparebank1.no
+          gateway_group_name: gr1
+          rmi_peer: apigw04.qa.sparebank1.no:40001
+    admin02:
+      hosts:
+        apigw-admin04.qa.sparebank1.no:
+          axwaytype: admin
+          hostnameShort: apigw-admin04
+          anmHost: apigw-admin03.qa.sparebank1.no
+          gateway_group_name: gr2
+          rmi_peer: apigw-admin03.qa.sparebank1.no:40001
+    apigw04:
+      hosts:
+        apigw04.qa.sparebank1.no:
+          axwaytype: admin
+          hostnameShort: apigw04
+          anmHost: apigw-admin04.qa.sparebank1.no
+          gateway_group_name: gr2
+          rmi_peer: apigw03.qa.sparebank1.no:40001
+    adminservers:
+      hosts:
+        apigw-admin03.qa.sparebank1.no:
+        apigw-admin04.qa.sparebank1.no:
+    cassandraservers:
+      hosts:
+        apigwcass01.test.sparebank1.no:
+          cass_hostnameShort: sandbox-cassandra01
+          cass_seeds:  sandbox-cassandra01.test.sparebank1.no
+          cassandra753BackupServer: sandbox-cassandra01.qa.sparebank1.no
+        sandbox-cassandra02.test.sparebank1.no:
+          cass_seeds:  sandbox-cassandra01.test.sparebank1.no
+          cass_hostnameShort: sandbox-cassandra02
+          cassandra753BackupServer: sandbox-cassandra02.qa.sparebank1.no
+        sandbox-cassandra03.test.sparebank1.no:
+          cass_hostnameShort: sandbox-cassandra03
+          cass_seeds:  sandbox-cassandra01.test.sparebank1.no
+          cassandra753BackupServer: sandbox-cassandra03.qa.sparebank1.no
