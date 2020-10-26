@@ -3,11 +3,15 @@ api_gateway_username: admin
 api_gateway_password: changeme
 api_portal_username: apiadmin
 api_portal_password: changeme
+api_rnm_password: changeme
+
+zabbixServerGroupDesc: lol-apigw-admin01.test, lol-apigw-admin02.test, lol-apigw01.test og lol-apigw02.test
+displayAnsibleMessages: false
 
 gateway_lisence_name: apiGateway.lic
 manager_lisence_name: apiMgr.lic
 
-
+localCertUrl: https://localhost:8090
 # Envsettings.props fields with overrides
 # Chache rmiURL
 
@@ -36,17 +40,12 @@ difi_basepath: 'https://oidc-ver2.difi.no'
 # Used by ldap autentication in API-Manager
 apimanager_ad_admin_role: 'CN=Role-Prosjekt-Apne-Api-NSA,OU=Roles,OU=Groups,OU=NSA,OU=Customers,DC=sb1a,DC=sparebank1,DC=no'
 
-# Global HTTP header incoming whitelist
-incoming_whitelist: Accept,Accept-Charset,Accept-Encoding,Accept-Language,Accept-Datetime,Authorization,Cache-Control,Connection,Cookie,Content-Length,Content-Type,Date,Forwarded,From,Host,Location,Origin,Pragma,Referer,User-Agent,Upgrade,Via,Warning,X-Forwarded-For,X-Forwarded-Host,X-Forwarded-Proto,AppKey,sst,rmt,financial_institution_id,financial_agreement_id,useAutomaticConsentScreen,ssn,rmt_expiration_date_time,agreement_ids,PartyID,Legal-Mandate,CorrelationID,AccountID,authorization,userinfo,X-Request-Id,X-Request-ID,X-User-Id,X-nonce,X-dynamicLinkingStamp,X-authmethod,X-clientIpAddress,X-bankRegNumber,X-idpType,customerID,AccountInfoRequestID
-
-# Global HTTP header outgoing whitelist
-outgoing_whitelist: Access-Control-Allow-Origin,Accept-Patch,Accept-Ranges,Allow,Alt-Svc,Cache-Control,Connection,Content-Disposition,Content-Encoding,Content-Language,Content-Length,Content-Location,Content-Range,Content-Type,Date,ETag,Expires,Last-Modified,Link,Location,Pragma,Proxy-Authenticate,Public-Key-Pins,Refresh,Retry-After,Server,Set-Cookie,Status,Strict-Transport-Security,Trailer,Transfer-Encoding,TSV,Upgrade,Vary,WarnJaing,WWW-Authenticate,X-Correlation-ID,ConsentScreen,Status,X-Request-Id,X-Request-ID,X-User-Id,X-nonce,X-dynamicLinkingStamp,X-authmethod,X-clientIpAddress,X-bankRegNumber,numberOfPages,audience,AccountInfoRequestID
-
 # cassandra keyspace
 cassandra_keyspace: evil_corp
+cassandra_main_server: lol-apigw-cass01.test.sparebank1.no
 
 # cassandra hosts (is not overriden  is done based on which group the server belongs to )
-
+x
 ### PSD2 settings
 issuer: 'https://lol-api-internal.test.sparebank1.no'
 # claim iss

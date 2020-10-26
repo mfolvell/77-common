@@ -25,6 +25,8 @@ displayAnsibleMessages: false
 
 kps_prefix: d2c94c7e_fa37_4925_9cb7_32c3500e21f6
 # Cassandra parameter
+# cassandra753BackupServer: sandbox-cassandra01.qa.sparebank1.no
+
 cassandra01: sandbox-cassandra01.test.sparebank1.no
 cassandra02: sandbox-cassandra02.test.sparebank1.no
 cassandra03: sandbox-cassandra03.test.sparebank1.no

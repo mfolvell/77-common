@@ -21,7 +21,6 @@
   reboot:
     pre_reboot_delay: 0
     reboot_timeout: 120
-    reboot_timeout: 3600
   register: standard_output
 - debug:
     var: standard_output
