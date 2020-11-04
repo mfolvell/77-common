@@ -4,5 +4,6 @@
   systemd:
     state: stopped
     name: axway-instance
-  become_user: "{{ appRunUser }}"
+  become: True
+
 # ==========================================================================================

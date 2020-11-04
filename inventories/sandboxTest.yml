@@ -1,0 +1,39 @@
+sandboxTest:
+  children:
+      gatewayservers:
+        children:
+          admin01:
+            hosts:
+              sandbox-gateway01.test.sparebank1.no:
+                axwaytype: domainAdmin
+                hostnameShort: sandbox-gateway01
+                anmHost:
+                gateway_group_name: sb1
+                rmi_peer:
+                hap_srvnavn:
+          apigw01:
+            hosts:
+              sandbox-gateway02.test.sparebank1.no:
+                axwaytype: admin
+                hostnameShort: sandbox-gateway02
+                anmHost: sandbox-gateway01.test.sparebank1.no
+                gateway_group_name: sb1
+                rmi_peer:
+                hap_srvnavn:
+      cassandraservers:
+        hosts:
+          sandbox-cassandra01.test.sparebank1.no:
+            cass_hostnameShort: sandbox-cassandra01
+            cass_seeds:  sandbox-cassandra01.test.sparebank1.no
+          sandbox-cassandra02.test.sparebank1.no:
+            cass_seeds:  sandbox-cassandra01.test.sparebank1.no
+            cass_hostnameShort: sandbox-cassandra02
+          sandbox-cassandra03.test.sparebank1.no:
+            cass_hostnameShort: sandbox-cassandra03
+            cass_seeds:  sandbox-cassandra01.test.sparebank1.no
+      cassandra753BackupServer:
+        hosts:
+          sandbox-cassandra01.qa.sparebank1.no:
+      portalservers:
+        hosts:
+          sandbox-portal01.test.sparebank1.no:

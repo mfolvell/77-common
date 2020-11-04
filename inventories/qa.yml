@@ -1,0 +1,48 @@
+qa:
+  children:
+    servers:
+      children:
+        adminServers:
+          hosts:
+            apigw-admin03.qa.sparebank1.no:
+              axwaytype: domainAdmin
+              hostnameShort: apigw-admin03
+              anmHost:
+              gateway_group_name: gr1
+              rmi_peer: apigw-admin04.qa.sparebank1.no:40001
+              hap_srvnavn: apigw-admin03
+            apigw-admin04.qa.sparebank1.no:
+              axwaytype: admin
+              hostnameShort: apigw-admin04
+              anmHost: apigw-admin03.qa.sparebank1.no
+              gateway_group_name: gr2
+              rmi_peer: apigw-admin03.qa.sparebank1.no:40001
+              hap_srvnavn: apigw-admin04
+        gatewayServers:
+          hosts:
+            apigw03.qa.sparebank1.no:
+              axwaytype: admin
+              hostnameShort: apigw03
+              anmHost: apigw-admin03.qa.sparebank1.no
+              gateway_group_name: gr1
+              rmi_peer: apigw04.qa.sparebank1.no:40001
+              hap_srvnavn: apigw03
+            apigw04.qa.sparebank1.no:
+              axwaytype: admin
+              hostnameShort: apigw04
+              anmHost: apigw-admin04.qa.sparebank1.no
+              gateway_group_name: gr2
+              rmi_peer: apigw03.qa.sparebank1.no:40001
+              hap_srvnavn: apigw04
+        allServers:
+          hosts:
+            apigw-admin03.qa.sparebank1.no:
+              axwaytype: admin
+        cassandraServers:
+          hosts:
+            apigw-cass01.qa.sparebank1.no:
+            apigw-cass02.qa.sparebank1.no:
+            apigw-cass03.qa.sparebank1.no:
+            apigw-cass04.qa.sparebank1.no:
+            apigw-cass05.qa.sparebank1.no:
+            apigw-cass06.qa.sparebank1.no:

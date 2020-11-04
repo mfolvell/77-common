@@ -1,0 +1,31 @@
+#  Local setting valid for only this environment
+
+api_gateway_username: admin
+api_gateway_password: Må byttes ut for dette miljø (husk ansible vault kryptering)
+api_manager_username: apiadmin
+api_manager_password: Må byttes ut for dette miljø (husk ansible vault kryptering)
+api_portal_username: apiadmin
+api_portal_password: Må byttes ut for dette miljø (husk ansible vault kryptering)
+
+gateway_firstnode: sandbox-gateway01.prod.sparebank1.noo
+
+gateway_lisence_name: apiGateway.lic
+manager_lisence_name: apiMgr.lic
+
+cassandraClusterName: 'API GW PROD'
+
+smtp_server_hostname: neptun.XXXX.sparebank1.no
+testdata_provisioner_basepath: https://sandbox-testdata-provisioner.prod.sparebank1.no
+
+zabbixServerGroupDesc: sandbox-gateway03.prod, apigw-gateway04.prod
+displayAnsibleMessages: false
+
+kps_prefix: d2c94c7e_fa37_4925_9cb7_32c3500e21f6
+
+cassandra01: sandbox-cassandra03.prod.sparebank1.no
+cassandra02: sandbox-cassandra04.prod.sparebank1.no
+cassandra03: sandbox-cassandra05.prod.sparebank1.no
+cass_cluster_name: API GW PROD
+cass_seed_pro_class_name: org.apache.cassandra.locator.SimpleSeedProvider
+cass_authenticator: AllowAllAuthenticator
+cass_authorizer: AllowAllAuthorizer

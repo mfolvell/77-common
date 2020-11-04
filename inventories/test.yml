@@ -1,0 +1,48 @@
+test:
+  children:
+    servers:
+      children:
+        adminServers:
+          hosts:
+            apigw-admin01.test.sparebank1.no:
+              axwaytype: domainAdmin
+              hostnameShort: apigw-admin01
+              anmHost:
+              gateway_group_name: gr1
+              rmi_peer: apigw-admin02.test.sparebank1.no:40001
+              hap_srvnavn: apigw-admin01
+          apigw-admin02.test.sparebank1.no:
+              axwaytype: admin
+              hostnameShort: apigw-admin02
+              anmHost: apigw-admin01.test.sparebank1.no
+              gateway_group_name: gr2
+              rmi_peer: apigw-admin01.test.sparebank1.no:40001
+              hap_srvnavn: apigw-admin02
+        gatewayServers:
+          hosts:
+            apigw01.test.sparebank1.no:
+              axwaytype: admin
+              hostnameShort: apigw01
+              anmHost: apigw-admin01.test.sparebank1.no
+              gateway_group_name: gr1
+              rmi_peer: apigw02.test.sparebank1.no:40001
+              hap_srvnavn: apigw01
+            apigw02.test.sparebank1.no:
+              axwaytype: admin
+              hostnameShort: apigw02
+              anmHost: apigw-admin02.test.sparebank1.no
+              gateway_group_name: gr2
+              rmi_peer: apigw01.test.sparebank1.no:40001
+              hap_srvnavn: apigw02
+          allServers:
+              hosts:
+                apigw01.test.sparebank1.no:
+                  axwaytype: admin
+          cassandraServers:
+            hosts:
+              apigw-cass01.test.sparebank1.no:
+              apigw-cass02.test.sparebank1.no:
+              apigw-cass03.test.sparebank1.no:
+              apigw-cass04.test.sparebank1.no:
+              apigw-cass05.test.sparebank1.no:
+              apigw-cass06.test.sparebank1.no:
