@@ -1,12 +1,6 @@
 #!/bin/bash
 set -e
 set -u
-if ! rpm -qa | grep -qw xmlstarlet; then
-    echo " ************* Install av xmlstarlet ************* "
-    sudo yum -y install xmlstarlet
-    clear
-fi
-
 git remote update
 if git diff-index --quiet HEAD --; then
    echo "There is no local change.  release can continue"
@@ -21,8 +15,7 @@ else
    fi
 fi
 
-ver=$( xmlstarlet sel -N 'x=http://maven.apache.org/POM/4.0.0' \
-    -t -v "//x:project/x:version" pom.xml )
+ver=$( xmllint --xpath "/*[name()='project']/*[name()='version']/text()" pom.xml )
 version=${ver//-SNAPSHOT/}
 
 echo "Creating release for version: "$version
@@ -30,11 +23,12 @@ read -p "Continue [Yn]? " -n 1 -r
 
 git tag -a "v$version" -m "Releasing version $version"
 
-# git add pom.xml
-# git commit -m "Endret pom (fjernet SNAPSHOT fra version)"
-# git push -u origin $branch_name
-#
-# git checkout master
+branch_name="release/v$version"
+echo "Ny branch branch_name" "$branch_name"
+git branch "release/v$version"
+git push -u origin "$branch_name"
+git co master
+
 mvn release:update-versions
 git push origin "v$version"
 git add pom.xml
