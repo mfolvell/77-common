@@ -8,6 +8,3 @@ gateway_firstnode: sandbox-gateway01.test.xxx.no
 
 gateway_lisence_name: apiGateway.lic
 manager_lisence_name: apiMgr.lic
-#
-# AXWAY_PASSWORD_ADMIN=changeme
-# AXWAY_ADMIN_USERNAME=admin

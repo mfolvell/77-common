@@ -11,9 +11,6 @@ gateway_firstnode: sandbox-gateway01.prod.sparebank1.noo
 
 gateway_lisence_name: apiGateway.lic
 manager_lisence_name: apiMgr.lic
-#
-# AXWAY_PASSWORD_ADMIN=changeme
-# AXWAY_ADMIN_USERNAME=admin
 
 cassandraClusterName: 'API GW PROD'
 
@@ -24,8 +21,6 @@ zabbixServerGroupDesc: sandbox-gateway03.prod, apigw-gateway04.prod
 displayAnsibleMessages: false
 
 kps_prefix: d2c94c7e_fa37_4925_9cb7_32c3500e21f6
-# Cassandra parameter
-# cassandra753BackupServer: sandbox-cassandra01.qa.sparebank1.no
 
 cassandra01: sandbox-cassandra03.prod.sparebank1.no
 cassandra02: sandbox-cassandra04.prod.sparebank1.no

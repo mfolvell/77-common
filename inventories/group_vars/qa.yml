@@ -16,16 +16,13 @@ api_portal_password: !vault |
           6563373161393166320a353162303837303461326364306631346131346266623035623662386562
           65623766343964643231313733376530363763386265386466623037616538333033
 
-zabbixServerGroupDesc: apigw-admin01.qa, apigw-admin02.qa, apigw01.qa og apigw02.qa
+zabbixServerGroupDesc: apigw-admin03.qa, apigw-admin04.qa, apigw03.qa og apigw04.qa
 displayAnsibleMessages: true
 
 gateway_lisence_name: apiGateway.lic
 manager_lisence_name: apiMgr.lic
 
 localCertUrl: https://localhost:8090
-
-# Envsettings.props fields with overrides
-# Chache rmiURL
 
 # Analytics Database properties
 analytics_dburl: "jdbc:oracle:thin:@(DESCRIPTION_LIST= (LOAD_BALANCE=off)(FAILOVER=on)(DESCRIPTION= (LOAD_BALANCE=on)(CONNECT_TIMEOUT=10)(RETRY_COUNT=3)(ADDRESS_LIST= (ADDRESS=(PROTOCOL=TCP)(HOST=arac01-scan.qa.sparebank1.no)(PORT=1521))) (CONNECT_DATA=(SERVICE_NAME=svc_kunde_axway))) (DESCRIPTION= (LOAD_BALANCE=on)(CONNECT_TIMEOUT=10)(RETRY_COUNT=3) (ADDRESS_LIST= (ADDRESS=(PROTOCOL=TCP)(HOST=arac02.qa.sparebank1.no)(PORT=1521))) (CONNECT_DATA=(SERVICE_NAME=svc_kunde_axway))))"
