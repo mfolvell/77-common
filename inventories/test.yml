@@ -11,7 +11,7 @@ test:
               gateway_group_name: gr1
               rmi_peer: apigw-admin02.test.sparebank1.no:40001
               hap_srvnavn: apigw-admin01
-          apigw-admin02.test.sparebank1.no:
+            apigw-admin02.test.sparebank1.no:
               axwaytype: admin
               hostnameShort: apigw-admin02
               anmHost: apigw-admin01.test.sparebank1.no
