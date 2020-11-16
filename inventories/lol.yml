@@ -1,6 +1,6 @@
 test:
   children:
-    servers:
+    lol:
       children:
         adminServers:
           children:

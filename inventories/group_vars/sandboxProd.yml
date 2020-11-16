@@ -11,8 +11,9 @@ gateway_firstnode: sandbox-gateway01.prod.sparebank1.noo
 
 gateway_lisence_name: apiGateway.lic
 manager_lisence_name: apiMgr.lic
-
+#  Cassandra config
 cassandraClusterName: 'API GW PROD'
+cassandra_keyspace: Må byttes ut for dette miljø (husk ansible vault kryptering)
 
 smtp_server_hostname: neptun.XXXX.sparebank1.no
 testdata_provisioner_basepath: https://sandbox-testdata-provisioner.prod.sparebank1.no
