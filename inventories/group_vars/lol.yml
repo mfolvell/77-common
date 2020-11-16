@@ -45,7 +45,7 @@ cassandra_keyspace: evil_corp
 cassandra_main_server: lol-apigw-cass01.test.sparebank1.no
 
 # cassandra hosts (is not overriden  is done based on which group the server belongs to )
-x
+cassandra_keyspace: evil_corp
 ### PSD2 settings
 issuer: 'https://lol-api-internal.test.sparebank1.no'
 # claim iss

@@ -1,6 +1,6 @@
 test:
   children:
-    lol:
+    servers:
       children:
         adminServers:
           children:
@@ -43,8 +43,8 @@ test:
                     rmi_peer: lol-apigw01.test.sparebank1.no:40001
                     hap_srvnavn: apigw02
         allServers:
-            hosts:
-              lol-apigw01.test.sparebank1.no:
+          hosts:
+            lol-apigw01.test.sparebank1.no:
                 axwaytype: admin
         cassandraServers:
           hosts:
