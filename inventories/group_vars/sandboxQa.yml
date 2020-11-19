@@ -7,12 +7,14 @@ api_manager_password: Må byttes ut for dette miljø (husk ansible vault krypter
 api_portal_username: apiadmin
 api_portal_password: Må byttes ut for dette miljø (husk ansible vault kryptering)
 
-gateway_firstnode: sandbox-gateway01.qa.sparebank1.noo
+gateway_firstnode: sandbox-gateway03.qa.sparebank1.noo
 
 gateway_lisence_name: apiGateway.lic
 manager_lisence_name: apiMgr.lic
 
+#  Cassandra config
 cassandraClusterName: 'API GW QA'
+cassandra_keyspace: xe77626b1_a554_4bdf_a219_9fcd9f8f0e47_group_2
 
 smtp_server_hostname: neptun.XXXX.sparebank1.no
 testdata_provisioner_basepath: https://sandbox-testdata-provisioner.qa.sparebank1.no
@@ -25,6 +27,7 @@ kps_prefix: d2c94c7e_fa37_4925_9cb7_32c3500e21f6
 cassandra01: sandbox-cassandra03.qa.sparebank1.no
 cassandra02: sandbox-cassandra04.qa.sparebank1.no
 cassandra03: sandbox-cassandra05.qa.sparebank1.no
+
 cass_cluster_name: API GW QA
 cass_seed_pro_class_name: org.apache.cassandra.locator.SimpleSeedProvider
 cass_authenticator: AllowAllAuthenticator

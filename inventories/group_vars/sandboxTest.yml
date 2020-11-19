@@ -15,7 +15,10 @@ manager_lisence_name: apiMgr.lic
 # AXWAY_PASSWORD_ADMIN=changeme
 # AXWAY_ADMIN_USERNAME=admin
 
+
+#  Cassandra config
 cassandraClusterName: 'API GW TEST'
+cassandra_keyspace: evil_corp
 
 smtp_server_hostname: neptun.test.sparebank1.no
 testdata_provisioner_basepath: https://sandbox-testdata-provisioner.test.sparebank1.no
