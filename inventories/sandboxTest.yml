@@ -1,8 +1,8 @@
 sandboxTest:
   children:
-      gatewayservers:
-        children:
-          admin01:
+      servers:
+        children: 
+          adminServers:
             hosts:
               sandbox-gateway01.test.sparebank1.no:
                 axwaytype: domainAdmin
@@ -11,7 +11,7 @@ sandboxTest:
                 gateway_group_name: sb1
                 rmi_peer:
                 hap_srvnavn:
-          apigw01:
+          gatewayServers:
             hosts:
               sandbox-gateway02.test.sparebank1.no:
                 axwaytype: admin

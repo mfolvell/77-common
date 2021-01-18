@@ -47,7 +47,7 @@ env.EHCACHE.HOSTNAME={{ inventory_hostname }}
 env.local.instance=¤¤inst¤¤
 
 # Chache rmiURL
-env.cache.rmiURL=//{{ inventory_hostname }}:40001/accessToken-rmt|//{{ inventory_hostname }}:40001/accessToken-sstKey|//{{ inventory_hostname }}:40001/AuthZCode-sstKey|//{{ inventory_hostname }}:40001/AuthZCode-oldAccessToken|//{{ inventory_hostname }}:40001/AuthZCode-finInst|//{{ inventory_hostname }}:40001/AuthZCode-financialAgreement|//{{ inventory_hostname }}:40001/accessToken-finInst|//{{ inventory_hostname }}:40001/accessToken-financialAgreement|//{{ inventory_hostname }}:40001/authenticationSubjectId-accessTokens
+env.cache.rmiURL=//{{ rmisrv01 }}:40001/accessToken-rmt|//{{ rmisrv02 }}:40001/accessToken-rmt|//{{ rmisrv03 }}:40001/accessToken-rmt|//{{ rmisrv01 }}:40001/accessToken-sstKey|//{{ rmisrv02 }}:40001/accessToken-sstKey|//{{ rmisrv03 }}:40001/accessToken-sstKey|//{{ rmisrv01 }}:40001/authenticationSubjectId-accessTokens|//{{ rmisrv02 }}:40001/authenticationSubjectId-accessTokens|//{{ rmisrv03 }}:40001/authenticationSubjectId-accessTokens
 
 ## host envProperties
 rmi_peer = {{ rmi_peer }}
