@@ -14,7 +14,6 @@ test:
               rmisrv01: lol-apigw-admin02.test.sparebank1.no
               rmisrv02: lol-apigw01.test.sparebank1.no
               rmisrv03: lol-apigw02.test.sparebank1.no
-        admgatewayServers:
           hosts:
             lol-apigw-admin02.test.sparebank1.no:
               axwaytype: admin
