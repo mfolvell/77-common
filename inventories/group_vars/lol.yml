@@ -6,7 +6,7 @@ api_portal_password: changeme
 api_rnm_password: changeme
 
 zabbixServerGroupDesc: lol-apigw-admin01.test, lol-apigw-admin02.test, lol-apigw01.test og lol-apigw02.test
-displayAnsibleMessages: true 
+displayAnsibleMessages: true
 
 gateway_lisence_name: apiGateway.lic
 manager_lisence_name: apiMgr.lic
