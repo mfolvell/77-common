@@ -11,6 +11,9 @@ qa:
               gateway_group_name: gr1
               rmi_peer: apigw-admin04.qa.sparebank1.no:40001
               hap_srvnavn: apigw-admin03
+              rmisrv01: apigw-admin04.qa.sparebank1.no
+              rmisrv02: apigw03.qa.sparebank1.no
+              rmisrv03: apigw04.qa.sparebank1.no
             apigw-admin04.qa.sparebank1.no:
               axwaytype: admin
               hostnameShort: apigw-admin04
@@ -18,6 +21,9 @@ qa:
               gateway_group_name: gr2
               rmi_peer: apigw-admin03.qa.sparebank1.no:40001
               hap_srvnavn: apigw-admin04
+              rmisrv01: apigw-admin03.qa.sparebank1.no
+              rmisrv02: apigw03.qa.sparebank1.no
+              rmisrv03: apigw04.qa.sparebank1.no              
         gatewayServers:
           hosts:
             apigw03.qa.sparebank1.no:
@@ -27,6 +33,9 @@ qa:
               gateway_group_name: gr1
               rmi_peer: apigw04.qa.sparebank1.no:40001
               hap_srvnavn: apigw03
+              rmisrv01: apigw04.qa.sparebank1.no
+              rmisrv02: apigw-admin03.qa.sparebank1.no
+              rmisrv03: apigw-admin04.qa.sparebank1.no
             apigw04.qa.sparebank1.no:
               axwaytype: admin
               hostnameShort: apigw04
@@ -34,6 +43,9 @@ qa:
               gateway_group_name: gr2
               rmi_peer: apigw03.qa.sparebank1.no:40001
               hap_srvnavn: apigw04
+              rmisrv01: apigw03.qa.sparebank1.no
+              rmisrv02: apigw-admin03.qa.sparebank1.no
+              rmisrv03: apigw-admin04.qa.sparebank1.no
         allServers:
           hosts:
             apigw-admin03.qa.sparebank1.no:
