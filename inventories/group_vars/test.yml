@@ -4,7 +4,7 @@ api_gateway_password: changeme
 api_portal_username: apiadmin
 api_portal_password: changeme
 
-zabbixServerGroupDesc: ----,,,,apigw-admin01.test, apigw-admin02.test, apigw01.test og apigw02.test
+zabbixServerGroupDesc: apigw-admin01.test, apigw-admin02.test, apigw01.test og apigw02.test
 displayAnsibleMessages: false
 
 gateway_lisence_name: apiGateway.lic
