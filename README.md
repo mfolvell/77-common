@@ -18,4 +18,4 @@ Det ligger ikke informasjon om hvilke server som rollene i dette repo skal kjør
 
 ## Innhold
 ### Roles
-Alle rollene er har navn som skal være selvforklarende.   Det er ikke nødvendig med mere info.  
+Alle rollene har navn som skal være selvforklarende.   Det er ikke nødvendig med mere info.  
