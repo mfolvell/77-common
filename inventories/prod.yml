@@ -43,9 +43,9 @@ prod:
               gateway_group_name: gr2
               rmi_peer: apigw03.prod.sparebank1.no:40001
               hap_srvnavn: apigw04
-              rmisrv03: apigw04.prod.sparebank1.no
-              rmisrv01: apigw-admin03.prod.sparebank1.no
-              rmisrv02: apigw-admin04.prod.sparebank1.no
+              rmisrv01: apigw04.prod.sparebank1.no
+              rmisrv02: apigw-admin03.prod.sparebank1.no
+              rmisrv03: apigw-admin04.prod.sparebank1.no
         allServers:
           hosts:
             apigw-admin03.prod.sparebank1.no:
