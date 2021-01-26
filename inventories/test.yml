@@ -11,6 +11,9 @@ test:
               gateway_group_name: gr1
               rmi_peer: apigw-admin02.test.sparebank1.no:40001
               hap_srvnavn: apigw-admin01
+              rmisrv01: apigw-admin02.test.sparebank1.no
+              rmisrv02: apigw01.test.sparebank1.no
+              rmisrv03: apigw02.test.sparebank1.no
             apigw-admin02.test.sparebank1.no:
               axwaytype: admin
               hostnameShort: apigw-admin02
@@ -18,6 +21,9 @@ test:
               gateway_group_name: gr2
               rmi_peer: apigw-admin01.test.sparebank1.no:40001
               hap_srvnavn: apigw-admin02
+              rmisrv01: apigw-admin01.test.sparebank1.no
+              rmisrv02: apigw01.test.sparebank1.no
+              rmisrv03: apigw02.test.sparebank1.no              
         gatewayServers:
           hosts:
             apigw01.test.sparebank1.no:
@@ -27,6 +33,9 @@ test:
               gateway_group_name: gr1
               rmi_peer: apigw02.test.sparebank1.no:40001
               hap_srvnavn: apigw01
+              rmisrv01: apigw-admin01.test.sparebank1.no
+              rmisrv02: apigw-admin02.test.sparebank1.no
+              rmisrv03: apigw02.test.sparebank1.no
             apigw02.test.sparebank1.no:
               axwaytype: admin
               hostnameShort: apigw02
@@ -34,6 +43,9 @@ test:
               gateway_group_name: gr2
               rmi_peer: apigw01.test.sparebank1.no:40001
               hap_srvnavn: apigw02
+              rmisrv01: apigw-admin01.test.sparebank1.no
+              rmisrv02: apigw-admin02.test.sparebank1.no
+              rmisrv03: apigw01.test.sparebank1.no
           allServers:
               hosts:
                 apigw01.test.sparebank1.no:
