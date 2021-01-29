@@ -6,7 +6,7 @@ api_portal_password: changeme
 api_rnm_password: changeme
 
 zabbixServerGroupDesc: lol-apigw-admin01.test, lol-apigw-admin02.test, lol-apigw01.test og lol-apigw02.test
-displayAnsibleMessages: true
+displayAnsibleMessages: false
 
 gateway_lisence_name: apiGateway.lic
 manager_lisence_name: apiMgr.lic
@@ -44,8 +44,6 @@ apimanager_ad_admin_role: 'CN=Role-Prosjekt-Apne-Api-NSA,OU=Roles,OU=Groups,OU=N
 cassandra_keyspace: evil_corp
 cassandra_main_server: lol-apigw-cass01.test.sparebank1.no
 
-# cassandra hosts (is not overriden  is done based on which group the server belongs to )
-cassandra_keyspace: evil_corp
 ### PSD2 settings
 issuer: 'https://lol-api-internal.test.sparebank1.no'
 # claim iss
