@@ -36,6 +36,7 @@ stage: lol
 sb1sk_basepath: 'https://sb1skws.test.sparebank1.no:443'
 apiautorisasjon_basepath: 'http://lol-sim01.test.sparebank1.no:8080/https://api-authorization-internal.test.sparebank1.no'
 difi_basepath: 'https://oidc-ver2.difi.no'
+maskinporten_basepath: 'https://ver2.maskinporten.no'
 
 # Used by ldap autentication in API-Manager
 apimanager_ad_admin_role: 'CN=Role-Prosjekt-Apne-Api-NSA,OU=Roles,OU=Groups,OU=NSA,OU=Customers,DC=sb1a,DC=sparebank1,DC=no'
@@ -45,7 +46,6 @@ cassandra_keyspace: evil_corp
 cassandra_main_server: lol-apigw-cass01.test.sparebank1.no
 
 # cassandra hosts (is not overriden  is done based on which group the server belongs to )
-cassandra_keyspace: evil_corp
 ### PSD2 settings
 issuer: 'https://lol-api-internal.test.sparebank1.no'
 # claim iss
