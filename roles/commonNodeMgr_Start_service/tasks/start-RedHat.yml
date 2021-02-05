@@ -1,9 +1,5 @@
-# ---
-# ==========================================================================================
-#
-- name: Start nodemanager command ({{ appRunUser }}) -> "{{ axway_bin }}/nodemanager -d"
-  command: "{{ axway_bin }}/nodemanager -d"
+- name:  Restart nodemanager med systemd service
+  systemd:
+    state: started
+    name: axway-nodemanager
   become: True
-- pause:
-    minutes: 1
-# ==========================================================================================
