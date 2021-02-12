@@ -54,3 +54,5 @@ rpm_portal_zip: 762PortalRpm.zip
 rpm_portal_url_762: http://ks.prod-int.sparebank1.no//storefiler//axwayPortal762/{{ rpm_portal_zip }}
 rpm_portal_url_762_sp7_rpm: apiportal-7.6.2-11.x86_64.rpm
 rpm_portal_url_762_sp7:  http://ks.prod-int.sparebank1.no//storefiler//axwayPortal762/{{ rpm_portal_url_762_sp7_rpm }}
+PublicApiUserKeyPath: "{{ AxwayBasePath_762 }}/publicUserKeyStore"
+PublicApiUser: public_user
