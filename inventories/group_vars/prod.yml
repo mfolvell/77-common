@@ -63,6 +63,7 @@ stage: prod
 sb1sk_basepath: 'https://api-sb1sk.prod.sparebank1.no:443'
 apiautorisasjon_basepath: "https://api-authorization-internal.intern.sparebank1.no"
 difi_basepath: "https://oidc.difi.no"
+maskinporten_basepath: 'https://maskinporten.no'
 
 # Used by ldap autentication in API-Manager
 apimanager_ad_admin_role: "CN=Role-Axway-Api-Manager-NSA,OU=Roles,OU=Groups,OU=NSA,OU=Customers,DC=sb1a,DC=sparebank1,DC=no"
