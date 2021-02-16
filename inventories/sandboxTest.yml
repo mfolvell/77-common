@@ -36,8 +36,11 @@ sandboxTest:
           sandbox-cassandra01.qa.sparebank1.no:
       portalservers:
         hosts:
+          sandbox-portal01.test.sparebank1.no:
+            server_id: 1
           sandbox-portal02.test.sparebank1.no:
+            server_id: 2
 
 
-          # sandbox-portal01.test.sparebank1.no:
+
 
