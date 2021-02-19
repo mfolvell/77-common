@@ -33,8 +33,9 @@ csrf_whitelist: '^https?:\/\/api-manager\.test\.sparebank1\.no'
 # Integration URLs
 stage: test
 sb1sk_basepath: 'https://sb1skws.test.sparebank1.no:443'
-apiautorisasjon_basepath: 'https://api-authorization-internal.test.sparebank1.no'
+apiautorisasjon_basepath: 'https://internal-api-backend.test.sparebank1.no'
 difi_basepath: 'https://oidc-ver2.difi.no'
+maskinporten_basepath: 'https://ver2.maskinporten.no'
 
 # Used by ldap autentication in API-Manager
 apimanager_ad_admin_role: 'CN=Role-Prosjekt-Apne-Api-NSA,OU=Roles,OU=Groups,OU=NSA,OU=Customers,DC=sb1a,DC=sparebank1,DC=no'
