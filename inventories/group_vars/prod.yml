@@ -61,7 +61,7 @@ csrf_whitelist: '^https?:\/\/api-manager\.prod\.sparebank1\.no'
 # Integration URLs
 stage: prod
 sb1sk_basepath: 'https://api-sb1sk.prod.sparebank1.no:443'
-apiautorisasjon_basepath: "https://api-authorization-internal.intern.sparebank1.no"
+apiautorisasjon_basepath: "https://internal-api-backend.prod.sparebank1.no"
 difi_basepath: "https://oidc.difi.no"
 maskinporten_basepath: 'https://maskinporten.no'
 
