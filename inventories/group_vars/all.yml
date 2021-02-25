@@ -41,17 +41,6 @@ cassandra_2212_rpm: apigw-cass-upgrade-lol-1.0.0-0.noarch.rpm
 cassandra_jdk: /usr/lib/jvm/jre
 
 # Sandbox
-## 752
-
-AxwayBasePath_753: /opt/Axway-7.5.3
-api_gateway_home_753: "{{ AxwayBasePath_753 }}/apigateway"
-axway_bin_753: "{{ AxwayBasePath_753 }}/apigateway/posix/bin"
-path_update_753: "{{ AxwayBasePath_753 }}/apigateway/install"
-axway_licence_path_753: "{{ AxwayBasePath_753 }}/apigateway/conf/licenses"
-firewall_conf_path_753: "{{ AxwayBasePath_753 }}"
-installer_name_753: APIGateway_7.5.3_Install_linux-x86-64_BN8.run
-installer_url_753: http://ks.prod-int.sparebank1.no//storefiler/{{ installer_name_753 }}
-
 # 762
 AxwayBasePath_762: /opt/Axway-7.6.2
 api_gateway_home_762: "{{ AxwayBasePath_762 }}/apigateway"
@@ -63,3 +52,7 @@ installer_name_762: APIGateway_7.6.2_Install_linux-x86-64_BN5.run
 installer_url_762: http://ks.prod-int.sparebank1.no//storefiler/{{ installer_name_762 }}
 rpm_portal_zip: 762PortalRpm.zip
 rpm_portal_url_762: http://ks.prod-int.sparebank1.no//storefiler//axwayPortal762/{{ rpm_portal_zip }}
+rpm_portal_url_762_sp7_rpm: apiportal-7.6.2-11.x86_64.rpm
+rpm_portal_url_762_sp7:  http://ks.prod-int.sparebank1.no//storefiler//axwayPortal762/{{ rpm_portal_url_762_sp7_rpm }}
+PublicApiUserKeyPath: "{{ AxwayBasePath_762 }}/publicUserKeyStore"
+PublicApiUser: public_user
