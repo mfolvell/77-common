@@ -11,7 +11,7 @@ qa:
               gateway_group_name: gr1
               rmi_peer: apigw-admin04.qa.sparebank1.no:40001
               hap_srvnavn: apigw-admin03
-              rmisrv: 
+              rmisrv: localhost
             apigw-admin04.qa.sparebank1.no:
               axwaytype: admin
               hostnameShort: apigw-admin04
