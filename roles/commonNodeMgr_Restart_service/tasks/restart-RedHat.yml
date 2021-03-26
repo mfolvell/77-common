@@ -1,0 +1,8 @@
+# ---
+# ==========================================================================================
+#
+- name:  Restart nodemanager med systemd service
+  systemd:
+    state: restarted
+    name: axway-nodemanager
+  become: True

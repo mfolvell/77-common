@@ -5,4 +5,7 @@
     state: started
     name: axway-instance
   become: True
+
+- pause:
+    minutes: 1
 # ==========================================================================================
