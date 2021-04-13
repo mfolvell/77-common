@@ -55,3 +55,9 @@ psd2_token_audience: 'evry-psd2-platform'
 
 # Filebeat
 filebeat_username: gOy2kORDtU6QmPxQho0P9SqdsGgvUB3S61m3TzpcnK1J
+
+# HAP verdier brukt av selvbetjening
+hap_hosts: 
+ - hap-test01.test.sparebank1.no
+ - hap-test02.test.sparebank1.no
+hap_backends: lol_api_backend
