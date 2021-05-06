@@ -3,6 +3,14 @@ test:
     servers:
       children:
         adminServers:
+          vars:
+            hap_hosts:
+              - hap-test01.test.sparebank1.no
+              - hap-test02.test.sparebank1.no
+            hap_backends:
+              - api_manager_backend
+              - api_manager_http_backend
+              - apigw_manager_backend
           hosts:
             apigw-admin01.test.sparebank1.no:
               axwaytype: domainAdmin
@@ -21,6 +29,15 @@ test:
               hap_srvnavn: apigw-admin02
               rmisrv: localhost
         gatewayServers:
+          vars:
+            hap_hosts:
+              - hap-test01.test.sparebank1.no
+              - hap-test02.test.sparebank1.no
+            hap_backends:
+              - api_backend
+              - api_internal_backend
+              - apigw_backend
+              - b2bapi_backend
           hosts:
             apigw01.test.sparebank1.no:
               axwaytype: admin
