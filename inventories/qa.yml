@@ -3,6 +3,14 @@ qa:
     servers:
       children:
         adminServers:
+          vars:
+            hap_hosts:
+              - hap-kontor01.qa.sparebank1.no
+              - hap-kontor02.qa.sparebank1.no
+            hap_backends:
+              - api_manager_backend
+              - api_manager_http_backend
+              - apigw_manager_backend
           hosts:
             apigw-admin03.qa.sparebank1.no:
               axwaytype: domainAdmin
@@ -21,6 +29,15 @@ qa:
               hap_srvnavn: apigw-admin04
               rmisrv: localhost
         gatewayServers:
+          vars:
+            hap_hosts:
+              - hap-kunde01.qa.sparebank1.no
+              - hap-kunde02.qa.sparebank1.no
+            hap_backends:
+              - api_internal_backend
+              - b2bapi_backend
+              - sb1_axway_api_gw_backend
+              - sb1_axway_api_oauth2_backend
           hosts:
             apigw03.qa.sparebank1.no:
               axwaytype: admin
