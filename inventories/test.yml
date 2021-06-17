@@ -59,11 +59,11 @@ test:
               hosts:
                 apigw01.test.sparebank1.no:
                   axwaytype: admin
-          cassandraServers:
-            hosts:
-              apigw-cass01.test.sparebank1.no:
-              apigw-cass02.test.sparebank1.no:
-              apigw-cass03.test.sparebank1.no:
-              apigw-cass04.test.sparebank1.no:
-              apigw-cass05.test.sparebank1.no:
-              apigw-cass06.test.sparebank1.no:
+        cassandraServers:
+          hosts:
+            apigw-cass01.test.sparebank1.no:
+            apigw-cass02.test.sparebank1.no:
+            apigw-cass03.test.sparebank1.no:
+            apigw-cass04.test.sparebank1.no:
+            apigw-cass05.test.sparebank1.no:
+            apigw-cass06.test.sparebank1.no:
