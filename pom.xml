@@ -2,8 +2,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ansible</groupId>
-    <artifactId>762-common</artifactId>
-    <version>1.0.23-SNAPSHOT</version>
+    <artifactId>77-common</artifactId>
+    <version>77.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>762-common</name>
