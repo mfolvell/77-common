@@ -1,6 +1,0 @@
-# ---
-# ==========================================================================================
-- name: Start instanse command ({{ appRunUser }})-> "{{ axway_bin }}/startinstance -n {{ hostnameShort }} -g {{ gateway_group_name }} -d"
-  command: "{{ axway_bin }}/startinstance -n {{ hostnameShort }} -g {{ gateway_group_name }} -d"
-  become_user: "{{ appRunUser }}"
-# ==========================================================================================
