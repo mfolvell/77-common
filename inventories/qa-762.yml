@@ -1,0 +1,69 @@
+qa:
+  children:
+    servers:
+      children:
+        adminServers:
+          vars:
+            hap_hosts:
+              - hap-kontor01.qa.sparebank1.no
+              - hap-kontor02.qa.sparebank1.no
+            hap_backends:
+              - api_manager_backend
+              - api_manager_http_backend
+              - apigw_manager_backend
+          hosts:
+            apigw-admin01.qa.sparebank1.no:
+              axwaytype: domainAdmin
+              hostnameShort: apigw-admin01
+              anmHost:
+              gateway_group_name: gr1
+              rmi_peer: apigw-admin02.qa.sparebank1.no:40001
+              hap_srvnavn: apigw-admin01
+              rmisrv: localhost
+            apigw-admin02.qa.sparebank1.no:
+              axwaytype: admin
+              hostnameShort: apigw-admin02
+              anmHost: apigw-admin01.qa.sparebank1.no
+              gateway_group_name: gr2
+              rmi_peer: apigw-admin01.qa.sparebank1.no:40001
+              hap_srvnavn: apigw-admin02
+              rmisrv: localhost
+        gatewayServers:
+          vars:
+            hap_hosts:
+              - hap-kunde01.qa.sparebank1.no
+              - hap-kunde02.qa.sparebank1.no
+            hap_backends:
+              - api_internal_backend
+              - b2bapi_backend
+              - sb1_axway_api_gw_backend
+              - sb1_axway_api_oauth2_backend
+          hosts:
+            apigw01.qa.sparebank1.no:
+              axwaytype: admin
+              hostnameShort: apigw01
+              anmHost: apigw-admin01.qa.sparebank1.no
+              gateway_group_name: gr1
+              rmi_peer: apigw02.qa.sparebank1.no:40001
+              hap_srvnavn: apigw01
+              rmisrv: apigw02.qa.sparebank1.no
+            apigw02.qa.sparebank1.no:
+              axwaytype: admin
+              hostnameShort: apigw02
+              anmHost: apigw-admin02.qa.sparebank1.no
+              gateway_group_name: gr2
+              rmi_peer: apigw01.qa.sparebank1.no:40001
+              hap_srvnavn: apigw02
+              rmisrv: apigw01.qa.sparebank1.no
+        allServers:
+          hosts:
+            apigw-admin01.qa.sparebank1.no:
+              axwaytype: admin
+        cassandraServers:
+          hosts:
+            apigw-cass01.qa.sparebank1.no:
+            apigw-cass02.qa.sparebank1.no:
+            apigw-cass03.qa.sparebank1.no:
+            apigw-cass04.qa.sparebank1.no:
+            apigw-cass05.qa.sparebank1.no:
+            apigw-cass06.qa.sparebank1.no:
