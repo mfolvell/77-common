@@ -15,11 +15,6 @@ localCertUrl: https://localhost:8090
 # Envsettings.props fields with overrides
 # Chache rmiURL
 
-# Analytics Database properties
-analytics_dburl: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=arac01-scan.test.sparebank1.no)(PORT=1521))(LOAD_BALANCE=YES)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=svc_kunde_axway)))
-analytics_dbuser: apigw
-analytics_dbpassword: apigw
-
 # API Gateway sb1sk- services username and password
 gateway_sb1sk_username: apigateway
 gateway_sb1sk_password: Qwer1234!

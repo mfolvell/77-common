@@ -32,6 +32,7 @@ cassandra_dir_2212 : /opt/cassandra-2212
 cassandra_config_2212: "{{ cassandra_dir_2212 }}/cassandra/conf/cassandra.yaml"
 cassandra_2212_rpm: apigw-cass-upgrade-lol-1.0.0-0.noarch.rpm
 cassandra_jdk: /usr/lib/jvm/jre
+cassandra_user: cassandra
 
 # 77
 AxwayBasePath_77: /opt/Axway-7.7

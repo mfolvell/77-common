@@ -4,6 +4,7 @@ api_gateway_password: changeme
 api_portal_username: apiadmin
 api_portal_password: changeme
 
+
 zabbixServerGroupDesc: apigw-admin01.test, apigw-admin02.test, apigw01.test og apigw02.test
 displayAnsibleMessages: false
 
@@ -13,11 +14,6 @@ manager_lisence_name: apiMgr.lic
 localCertUrl: https://localhost:8090
 # Envsettings.props fields with overrides
 # Chache rmiURL
-
-# Analytics Database properties
-analytics_dburl: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=arac01-scan.test.sparebank1.no)(PORT=1521))(LOAD_BALANCE=YES)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=svc_kunde_axway)))
-analytics_dbuser: apigw
-analytics_dbpassword: apigw
 
 # API Gateway sb1sk- services username and password
 gateway_sb1sk_username: apigateway
@@ -45,7 +41,6 @@ cassandra_keyspace: evil_corp
 cassandra_main_server: apigw-cass01.test.sparebank1.no
 
 # cassandra hosts (is not overriden  is done based on which group the server belongs to )
-
 ### PSD2 settings
 issuer: 'https://api-test.sparebank1.no'
 # claim iss
@@ -55,3 +50,12 @@ psd2_token_audience: 'evry-psd2-platform'
 
 # Filebeat
 filebeat_username: gOy2kORDtU6QmPxQho0P9SqdsGgvUB3S61m3TzpcnK1J
+
+
+hap_hosts:
+  - hap-test03.test.sparebank1.no
+  - hap-test04.test.sparebank1.no
+hap_backends:
+  - api_manager_backend
+  - api_manager_http_backend
+  - apigw_manager_backend

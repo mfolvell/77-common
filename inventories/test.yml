@@ -53,15 +53,16 @@ test:
                   rmi_peer: apigw04.test.sparebank1.no:40001
                   hap_srvnavn: apigw03
                   rmisrv: apigw04.test.sparebank1.no
-            apigw02:          
+            apigw02:
+              hosts:          
+                apigw04.test.sparebank1.no:
+                  axwaytype: admin
+                  hostnameShort: apigw04
+                  anmHost: apigw-admin04.test.sparebank1.no
                   gateway_group_name: gr2
                   rmi_peer: apigw03.test.sparebank1.no:40001
                   hap_srvnavn: apigw04
                   rmisrv: apigw03.test.sparebank1.no
-          allServers:
-              hosts:
-                apigw01.test.sparebank1.no:
-                  axwaytype: admin
         cassandraServers:
           hosts:
             apigw-cass01.test.sparebank1.no:
