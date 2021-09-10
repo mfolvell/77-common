@@ -56,3 +56,6 @@ hap_hosts:
  - hap-test01.test.sparebank1.no
  - hap-test02.test.sparebank1.no
 hap_backends: lol_api_backend
+
+# 762 to 77 upgrade values
+kpsadmin762Server: apigw-admin01.test.sparebank1.no

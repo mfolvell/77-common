@@ -44,3 +44,9 @@ firewall_conf_path_77: "{{ AxwayBasePath_77 }}"
 installer_name_77: APIGateway_7.7.20210530_Install_linux-x86-64_BN02.run
 installer_url_77: http://ks.prod-int.sparebank1.no//storefiler//axway/{{ installer_name_77 }}
 docker_deploy_name: docker.intern.sparebank1.no/axway/77deploy
+
+# 762 to 77 upgrade values
+AxwayBasePath_762: /opt/Axway-7.6.2
+api_gateway_home_762: "{{ AxwayBasePath_762 }}/apigateway"
+axway_bin_762: "{{ AxwayBasePath_762 }}/apigateway/posix/bin"
+path_update_762: "{{ AxwayBasePath_762 }}/apigateway/install"
