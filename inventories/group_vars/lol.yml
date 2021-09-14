@@ -59,3 +59,11 @@ hap_backends: lol_api_backend
 
 # 762 to 77 upgrade values
 kpsadmin762Server: apigw-admin01.test.sparebank1.no
+
+cassandra01: lol-apigw-cass07.test.sparebank1.no
+cassandra02: lol-apigw-cass08.test.sparebank1.no
+cassandra03: lol-apigw-cass09.test.sparebank1.no
+cassandra04: lol-apigw-cass10.test.sparebank1.no
+cassandra05: lol-apigw-cass11.test.sparebank1.no
+cassandra06: lol-apigw-cass12.test.sparebank1.no
+
