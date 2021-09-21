@@ -2,4 +2,4 @@
 # ================================================================
 hostShort={{ hostnameShort }}
 nodeManager=$(jq --arg hostnameShort "$hostShort" --slurp '.[].groups[].services[] | select (.id | contains("nodemanager")) | select(.name==$hostnameShort) |.id' {{ api_gateway_home }}/groups/topology.json)
-echo "${nodeManager//'"'}"
+echo ${nodeManager//'"'}

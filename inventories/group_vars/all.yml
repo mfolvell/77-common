@@ -33,6 +33,9 @@ cassandra_config_2212: "{{ cassandra_dir_2212 }}/cassandra/conf/cassandra.yaml"
 cassandra_2212_rpm: apigw-cass-upgrade-lol-1.0.0-0.noarch.rpm
 cassandra_jdk: /usr/lib/jvm/jre
 cassandra_user: cassandra
+cassandra_firewall_config: tcp 8090,8080,8089,8065,8075,8076,8085,7000,9160,9042,7199,40001,40002
+cassandra_firewall_path: /opt/firewall
+
 
 # 77
 AxwayBasePath_77: /opt/Axway-7.7
