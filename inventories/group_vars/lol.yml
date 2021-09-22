@@ -67,3 +67,6 @@ cassandra04: lol-apigw-cass10.test.sparebank1.no
 cassandra05: lol-apigw-cass11.test.sparebank1.no
 cassandra06: lol-apigw-cass12.test.sparebank1.no
 
+# Cassandra verdier
+cassandra_cluster_name: 'API GW TEST'
+cassandra_seed: 'lol-apigw-cass01, lol-apigw-cass03, lol-apigw-cass02, lol-apigw-cass04'

@@ -29,7 +29,7 @@ appCassandraUser: cassandra
 # Cassandra
 cassandra_dir_2208: /opt/cassandra
 cassandra_dir_2212 : /opt/cassandra-2212
-cassandra_config_2212: "{{ cassandra_dir_2212 }}/cassandra/conf/cassandra.yaml"
+cassandra_config_dir_2212: "{{ cassandra_dir_2212 }}/cassandra/conf"
 cassandra_2212_rpm: apigw-cass-upgrade-lol-1.0.0-0.noarch.rpm
 cassandra_jdk: /usr/lib/jvm/jre
 cassandra_user: cassandra
@@ -53,3 +53,4 @@ AxwayBasePath_762: /opt/Axway-7.6.2
 api_gateway_home_762: "{{ AxwayBasePath_762 }}/apigateway"
 axway_bin_762: "{{ AxwayBasePath_762 }}/apigateway/posix/bin"
 path_update_762: "{{ AxwayBasePath_762 }}/apigateway/install"
+
