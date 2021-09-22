@@ -53,11 +53,17 @@ lol:
         cassandraServers:
           hosts:
             lol-apigw-cass07.test.sparebank1.no:
+              cassandra_datacenter: datacenter1
             lol-apigw-cass08.test.sparebank1.no:
+              cassandra_datacenter: datacenter2
             lol-apigw-cass09.test.sparebank1.no:
+              cassandra_datacenter: datacenter1
             lol-apigw-cass10.test.sparebank1.no:
+              cassandra_datacenter: datacenter2            
             lol-apigw-cass11.test.sparebank1.no:
+              cassandra_datacenter: datacenter1
             lol-apigw-cass12.test.sparebank1.no:
+              cassandra_datacenter: datacenter2
         762adminServer:
           hosts:
             apigw-admin01.test.sparebank1.no:
