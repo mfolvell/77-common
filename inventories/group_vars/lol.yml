@@ -60,13 +60,13 @@ hap_backends: lol_api_backend
 # 762 to 77 upgrade values
 kpsadmin762Server: apigw-admin01.test.sparebank1.no
 
-cassandra01: lol-apigw-cass07.test.sparebank1.no
-cassandra02: lol-apigw-cass08.test.sparebank1.no
-cassandra03: lol-apigw-cass09.test.sparebank1.no
-cassandra04: lol-apigw-cass10.test.sparebank1.no
-cassandra05: lol-apigw-cass11.test.sparebank1.no
-cassandra06: lol-apigw-cass12.test.sparebank1.no
+cassandra01: lol-apigw-cass01.test.sparebank1.no
+cassandra02: lol-apigw-cass02.test.sparebank1.no
+cassandra03: lol-apigw-cass03.test.sparebank1.no
+cassandra04: lol-apigw-cass04.test.sparebank1.no
+cassandra05: lol-apigw-cass05.test.sparebank1.no
+cassandra06: lol-apigw-cass06.test.sparebank1.no
 
-# Cassandra verdier
-cassandra_cluster_name: 'APIGW 77 LOL'
-cassandra_seed: 'lol-apigw-cass07, lol-apigw-cass09, lol-apigw-cass08, lol-apigw-cass10'
+# # Cassandra verdier
+# cassandra_cluster_name: 'APIGW 77 LOL'
+# cassandra_seed: 'lol-apigw-cass07, lol-apigw-cass09, lol-apigw-cass08, lol-apigw-cass10'

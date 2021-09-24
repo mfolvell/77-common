@@ -52,18 +52,12 @@ lol:
                 axwaytype: admin
         cassandraServers:
           hosts:
-            lol-apigw-cass07.test.sparebank1.no:
-              cassandra_datacenter: 77dc01
-            lol-apigw-cass08.test.sparebank1.no:
-              cassandra_datacenter: 77dc02
-            lol-apigw-cass09.test.sparebank1.no:
-              cassandra_datacenter: 77dc01
-            lol-apigw-cass10.test.sparebank1.no:
-              cassandra_datacenter: 77dc02
-            lol-apigw-cass11.test.sparebank1.no:
-              cassandra_datacenter: 77dc01
-            lol-apigw-cass12.test.sparebank1.no:
-              cassandra_datacenter: 77dc02
+            lol-apigw-cass01.test.sparebank1.no:
+            lol-apigw-cass02.test.sparebank1.no:
+            lol-apigw-cass03.test.sparebank1.no:
+            lol-apigw-cass04.test.sparebank1.no:
+            lol-apigw-cass05.test.sparebank1.no:
+            lol-apigw-cass06.test.sparebank1.no:
         762adminServer:
           hosts:
             apigw-admin01.test.sparebank1.no:
