@@ -60,7 +60,11 @@ lol:
             lol-apigw-cass06.test.sparebank1.no:
         762adminServer:
           hosts:
-            apigw-admin01.test.sparebank1.no:
+            lol-apigw-admin01.test.sparebank1.no:
+              axwaytype: domainAdmin
               hostnameShort: apigw-admin01
+              anmHost:
               gateway_group_name: gr1
-  
+              rmi_peer: lol-apigw-admin01.test.sparebank1.no:40001
+              hap_srvnavn: apigw-admin01
+              rmisrv: localhost
