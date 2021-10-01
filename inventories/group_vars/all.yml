@@ -8,26 +8,18 @@ localCertUrl: https://localhost:8090
 # API Gateway
 first_node_manager_long: 1
 
-# # git_lisence_version: 77
-# git_localFolder: localGitFolder
-
-# fed_file_name: Axway77-20200225-InitialDeployFromTest.fed
-
 script_home: /opt/SB1Script/
 script_log: /var/log/SB1Script/reorg_cass_rmt/
 axway_log: /var/log/apigateway
 
 backup_folder: /opt/backup/
 
-#   https://stash.intern.sparebank1.no/projects/AXWAY/repos/axway-licenses/browse/
-# git_repo:77/lol/lol-apigw-admin01.test.sparebank1.no.apiportal.lic
-
 appInstallationUser: root
 appRunUser: axway
 appCassandraUser: cassandra
 
 # Cassandra
-cassandra_dir_2208: /opt/cassandra
+
 cassandra_dir_2212 : /opt/cassandra-2212
 cassandra_config_dir_2212: "{{ cassandra_dir_2212 }}/cassandra/conf"
 cassandra_2212_rpm: apigw-cass-upgrade-lol-1.0.0-0.noarch.rpm
@@ -53,4 +45,5 @@ AxwayBasePath_762: /opt/Axway-7.6.2
 api_gateway_home_762: "{{ AxwayBasePath_762 }}/apigateway"
 axway_bin_762: "{{ AxwayBasePath_762 }}/apigateway/posix/bin"
 path_update_762: "{{ AxwayBasePath_762 }}/apigateway/install"
+
 

@@ -2,8 +2,14 @@
 api_gateway_username: admin
 api_gateway_password: changeme
 api_portal_username: apiadmin
-api_portal_password: changeme
-
+api_portal_password: !vault |
+                     $ANSIBLE_VAULT;1.2;AES256;test
+                     65353766326139366434333839333132396536323439333264376363373133376365633734303336
+                     3265366232303739636639376463363232626564323833390a626337646330363365333332383436
+                     36333935666331396334313238336566656635336263653739633430363433396664653763633439
+                     6461393133643263390a323566396330353365633464633933323363346238356136333038623938
+                     35373732663061353566343364353332353430646562356662616434373231353537
+api_rnm_password: changeme
 
 zabbixServerGroupDesc: apigw-admin01.test, apigw-admin02.test, apigw01.test og apigw02.test
 displayAnsibleMessages: false
@@ -51,7 +57,7 @@ psd2_token_audience: 'evry-psd2-platform'
 # Filebeat
 filebeat_username: gOy2kORDtU6QmPxQho0P9SqdsGgvUB3S61m3TzpcnK1J
 
-
+# HAP verdier brukt av selvbetjening
 hap_hosts:
   - hap-test03.test.sparebank1.no
   - hap-test04.test.sparebank1.no
