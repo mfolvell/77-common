@@ -37,7 +37,7 @@ maskinporten_basepath: 'https://ver2.maskinporten.no'
 apimanager_ad_admin_role: 'CN=Role-Prosjekt-Apne-Api-NSA,OU=Roles,OU=Groups,OU=NSA,OU=Customers,DC=sb1a,DC=sparebank1,DC=no'
 
 # cassandra keyspace
-cassandra_keyspace: evil_corp
+cassandra_keyspace: apigw_77_lol
 cassandra_main_server: lol-apigw-cass01.test.sparebank1.no
 
 # cassandra hosts (is not overriden  is done based on which group the server belongs to )
@@ -56,3 +56,10 @@ hap_hosts:
  - hap-test01.test.sparebank1.no
  - hap-test02.test.sparebank1.no
 hap_backends: lol_api_backend
+
+cassandra01: apigw-cass01
+cassandra02: apigw-cass02
+cassandra03: apigw-cass03
+cassandra04: apigw-cass04
+cassandra05: apigw-cass05
+cassandra06: apigw-cass06

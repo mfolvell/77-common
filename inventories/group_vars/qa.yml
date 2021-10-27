@@ -69,7 +69,7 @@ maskinporten_basepath: 'https://ver2.maskinporten.no'
 apimanager_ad_admin_role: "CN=Role-Prosjekt-Apne-Api-NSA,OU=Roles,OU=Groups,OU=NSA,OU=Customers,DC=sb1a,DC=sparebank1,DC=no"
 
 # cassandra keyspace
-cassandra_keyspace: "x8b2a57ef_feb0_4c5a_a72b_ac2e9825092d_group_2"
+cassandra_keyspace: apigw_77_qa
 cassandra_main_server: apigw-cass01.qa.sparebank1.no
 # cassandra hosts (is not overriden  is done based on which group the server belongs to )
 

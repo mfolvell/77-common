@@ -28,6 +28,12 @@ cassandra_user: cassandra
 cassandra_firewall_config: tcp 8090,8080,8089,8065,8075,8076,8085,7000,9160,9042,7199,40001,40002
 cassandra_firewall_path: /opt/firewall
 
+cassandra01: apigw-cass01
+cassandra02: apigw-cass02
+cassandra03: apigw-cass03
+cassandra04: apigw-cass04
+cassandra05: apigw-cass05
+cassandra06: apigw-cass06
 
 # 77
 AxwayBasePath_77: /opt/Axway-7.7
