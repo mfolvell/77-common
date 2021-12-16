@@ -123,3 +123,5 @@ env.psd2.token.lifespan={{ token_lifespan }}
 # claim exp + iat (in secounds)
 # claim aud
 env.psd2.token.audience={{ psd2_token_audience   }}
+
+env.SERVICES.CONTENTSECURITYPOLICY=script-src 'self' https://axway.com/ https://*.axway.com 'unsafe-eval'; img-src 'self' https://*.axway.com data: blob:; style-src 'self' 'unsafe-inline' https://*.axway.com; font-src 'self' data: blob:; object-src 'self'; media-src 'self'; frame-src 'self';frame-ancestors 'none'; upgrade-insecure-requests

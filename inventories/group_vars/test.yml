@@ -2,13 +2,7 @@
 api_gateway_username: admin
 api_gateway_password: changeme
 api_portal_username: apiadmin
-api_portal_password: !vault |
-                     $ANSIBLE_VAULT;1.2;AES256;test
-                     65353766326139366434333839333132396536323439333264376363373133376365633734303336
-                     3265366232303739636639376463363232626564323833390a626337646330363365333332383436
-                     36333935666331396334313238336566656635336263653739633430363433396664653763633439
-                     6461393133643263390a323566396330353365633464633933323363346238356136333038623938
-                     35373732663061353566343364353332353430646562356662616434373231353537
+api_portal_password: N0rgesBesteDigitalBank!
 api_rnm_password: changeme
 
 zabbixServerGroupDesc: apigw-admin01.test, apigw-admin02.test, apigw01.test og apigw02.test
@@ -43,8 +37,18 @@ maskinporten_basepath: 'https://ver2.maskinporten.no'
 apimanager_ad_admin_role: 'CN=Role-Prosjekt-Apne-Api-NSA,OU=Roles,OU=Groups,OU=NSA,OU=Customers,DC=sb1a,DC=sparebank1,DC=no'
 
 # cassandra keyspace
-cassandra_keyspace: apigw_77_test
-cassandra_main_server: apigw-cass01.test.sparebank1.no
+cassandra_keyspace: evil_corp
+
+cassandra01: apigw-cass01
+cassandra02: apigw-cass02
+cassandra03: apigw-cass03
+cassandra04: apigw-cass04
+cassandra05: apigw-cass05
+cassandra06: apigw-cass06
+
+cassandra_cluster_name: API GW TEST
+
+# cassandra_main_server: apigw-cass01.test.sparebank1.no
 
 # cassandra hosts (is not overriden  is done based on which group the server belongs to )
 ### PSD2 settings
@@ -65,3 +69,8 @@ hap_backends:
   - api_manager_backend
   - api_manager_http_backend
   - apigw_manager_backend
+
+# lokale variable relatert til sletting av rmt fra cassandra
+apigw_admin: apigw-admin01.test.sparebank1.no
+apigwBasePath: https://{{ apigw_admin }}/api/router/service/
+apigwInstance: instance-1

@@ -63,11 +63,33 @@ test:
                   rmi_peer: apigw03.test.sparebank1.no:40001
                   hap_srvnavn: apigw04
                   rmisrv: apigw04.test.sparebank1.no
+        admin762:
+          hosts:
+            apigw-admin01.test.sparebank1.no:
+              gateway_group_name: gr1
         cassandraServers:
           hosts:
             apigw-cass01.test.sparebank1.no:
+                cassandra_seeds: apigw-cass01, apigw-cass03, apigw-cass02, apigw-cass04
+                cassandra_dc: datacenter1
+                cassandra_rack: rack1            
             apigw-cass02.test.sparebank1.no:
+                cassandra_seeds: apigw-cass02, apigw-cass04, apigw-cass01, apigw-cass03
+                cassandra_dc: datacenter2
+                cassandra_rack: rack1            
             apigw-cass03.test.sparebank1.no:
+                cassandra_seeds: apigw-cass01, apigw-cass03, apigw-cass02, apigw-cass04
+                cassandra_dc: datacenter1
+                cassandra_rack: rack2            
             apigw-cass04.test.sparebank1.no:
+                cassandra_seeds: apigw-cass02, apigw-cass04, apigw-cass01, apigw-cass03
+                cassandra_dc: datacenter2
+                cassandra_rack: rack2
             apigw-cass05.test.sparebank1.no:
+                cassandra_seeds: apigw-cass01, apigw-cass03, apigw-cass02, apigw-cass04
+                cassandra_dc: datacenter1
+                cassandra_rack: rack3            
             apigw-cass06.test.sparebank1.no:
+                cassandra_seeds: apigw-cass02, apigw-cass04, apigw-cass01, apigw-cass03
+                cassandra_dc: datacenter2
+                cassandra_rack: rack3           

@@ -22,11 +22,13 @@ appCassandraUser: cassandra
 
 cassandra_dir_2212 : /opt/cassandra-2212
 cassandra_config_dir_2212: "{{ cassandra_dir_2212 }}/cassandra/conf"
+cassandra_bin_dir_2212: "{{ cassandra_dir_2212 }}/cassandra/bin"
 cassandra_2212_rpm: apigw-cass-upgrade-lol-1.0.0-0.noarch.rpm
 cassandra_jdk: /usr/lib/jvm/jre
 cassandra_user: cassandra
 cassandra_firewall_config: tcp 8090,8080,8089,8065,8075,8076,8085,7000,9160,9042,7199,40001,40002
 cassandra_firewall_path: /opt/firewall
+cassandra_keyspace_77: apigw_77
 
 cassandra01: apigw-cass01
 cassandra02: apigw-cass02
@@ -43,13 +45,13 @@ path_update_77: "{{ AxwayBasePath_77 }}/apigateway/install"
 axway_licence_path_77: "{{ AxwayBasePath_77 }}/apigateway/conf/licenses"
 firewall_conf_path_77: "{{ AxwayBasePath_77 }}"
 installer_name_77: APIGateway_7.7.20210530_Install_linux-x86-64_BN02.run
+
 installer_url_77: http://ks.prod-int.sparebank1.no//storefiler//axway/{{ installer_name_77 }}
 docker_deploy_name: docker.intern.sparebank1.no/axway/77deploy
+installer_log4jfix: APIGateway_7.7.20210530_Patch26166_57db2b1187_allOS_BN20211212.tgz
 
 # 762 to 77 upgrade values
 AxwayBasePath_762: /opt/Axway-7.6.2
 api_gateway_home_762: "{{ AxwayBasePath_762 }}/apigateway"
 axway_bin_762: "{{ AxwayBasePath_762 }}/apigateway/posix/bin"
 path_update_762: "{{ AxwayBasePath_762 }}/apigateway/install"
-
-

@@ -36,7 +36,6 @@ prod:
                   rmi_peer: apigw02.prod.sparebank1.no:40001
                   hap_srvnavn: apigw01
                   rmisrv: apigw02.prod.sparebank1.no
-          children:
             apigw02:
                 apigw02.prod.sparebank1.no:
                   axwaytype: admin
@@ -50,11 +49,33 @@ prod:
           hosts:
             apigw-admin01.prod.sparebank1.no:
               axwaytype: admin
+        admin762:
+          hosts:
+            apigw-admin03.prod.sparebank1.no:
+              gateway_group_name: gr1              
         cassandraServers:
           hosts:
             apigw-cass01.prod.sparebank1.no:
+                cassandra_seeds: apigw-cass01, apigw-cass03, apigw-cass02, apigw-cass04
+                cassandra_dc: datacenter1
+                cassandra_rack: rack1
             apigw-cass02.prod.sparebank1.no:
+                cassandra_seeds: apigw-cass02, apigw-cass04, apigw-cass01, apigw-cass03
+                cassandra_dc: datacenter2
+                cassandra_rack: rack1
             apigw-cass03.prod.sparebank1.no:
+                cassandra_seeds: apigw-cass01, apigw-cass03, apigw-cass02, apigw-cass04
+                cassandra_dc: datacenter1
+                cassandra_rack: rack2
             apigw-cass04.prod.sparebank1.no:
+                cassandra_seeds: apigw-cass02, apigw-cass04, apigw-cass01, apigw-cass03
+                cassandra_dc: datacenter2
+                cassandra_rack: rack2
             apigw-cass05.prod.sparebank1.no:
+                cassandra_seeds: apigw-cass01, apigw-cass03, apigw-cass02, apigw-cass04
+                cassandra_dc: datacenter1
+                cassandra_rack: rack3
             apigw-cass06.prod.sparebank1.no:
+                cassandra_seeds: apigw-cass02, apigw-cass04, apigw-cass01, apigw-cass03
+                cassandra_dc: datacenter2
+                cassandra_rack: rack3            

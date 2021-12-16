@@ -12,8 +12,6 @@ gateway_lisence_name: apiGateway.lic
 manager_lisence_name: apiMgr.lic
 
 localCertUrl: https://localhost:8090
-# Envsettings.props fields with overrides
-# Chache rmiURL
 
 # API Gateway sb1sk- services username and password
 gateway_sb1sk_username: apigateway
@@ -38,8 +36,15 @@ apimanager_ad_admin_role: 'CN=Role-Prosjekt-Apne-Api-NSA,OU=Roles,OU=Groups,OU=N
 
 # cassandra keyspace
 cassandra_keyspace: evil_corp
-cassandra_keyspace_77: apigw_77_lol
-cassandra_main_server: lol-apigw-cass01.test.sparebank1.no
+
+cassandra01: lol-apigw-cass01
+cassandra02: lol-apigw-cass02
+cassandra03: lol-apigw-cass03
+cassandra04: lol-apigw-cass04
+cassandra05: lol-apigw-cass05
+cassandra06: lol-apigw-cass06
+
+cassandra_cluster_name: API GW TEST
 
 # cassandra hosts (is not overriden  is done based on which group the server belongs to )
 ### PSD2 settings
@@ -58,11 +63,3 @@ hap_hosts:
  - hap-test02.test.sparebank1.no
 hap_backends: lol_api_backend
 
-cassandra01: apigw-cass01
-cassandra02: apigw-cass02
-cassandra03: apigw-cass03
-cassandra04: apigw-cass04
-cassandra05: apigw-cass05
-cassandra06: apigw-cass06
-
-cassandra_cluster_name: API GW TEST
