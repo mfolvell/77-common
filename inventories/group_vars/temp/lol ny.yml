@@ -49,35 +49,22 @@ lol:
         allServers:
           hosts:
             lol-apigw01.test.sparebank1.no:
-              axwaytype: admin
-        admin762:
-          hosts:
-            apigw-admin01.test.sparebank1.no:
-              gateway_group_name: gr1
+                axwaytype: admin
         cassandraServers:
           hosts:
             lol-apigw-cass01.test.sparebank1.no:
-                cassandra_seeds: apigw-cass01, apigw-cass03, apigw-cass02, apigw-cass04
-                cassandra_dc: datacenter1
-                cassandra_rack: rack1
             lol-apigw-cass02.test.sparebank1.no:
-                cassandra_seeds: apigw-cass02, apigw-cass04, apigw-cass01, apigw-cass03
-                cassandra_dc: datacenter2
-                cassandra_rack: rack1
             lol-apigw-cass03.test.sparebank1.no:
-                cassandra_seeds: apigw-cass01, apigw-cass03, apigw-cass02, apigw-cass04
-                cassandra_dc: datacenter1
-                cassandra_rack: rack2
             lol-apigw-cass04.test.sparebank1.no:
-                cassandra_seeds: apigw-cass02, apigw-cass04, apigw-cass01, apigw-cass03
-                cassandra_dc: datacenter2
-                cassandra_rack: rack2
             lol-apigw-cass05.test.sparebank1.no:
-                cassandra_seeds: apigw-cass01, apigw-cass03, apigw-cass02, apigw-cass04
-                cassandra_dc: datacenter1
-                cassandra_rack: rack3
             lol-apigw-cass06.test.sparebank1.no:
-                cassandra_seeds: apigw-cass02, apigw-cass04, apigw-cass01, apigw-cass03
-                cassandra_dc: datacenter2
-                cassandra_rack: rack3
-      
+        762adminServer:
+          hosts:
+            lol-apigw-admin01.test.sparebank1.no:
+              axwaytype: domainAdmin
+              hostnameShort: apigw-admin01
+              anmHost:
+              gateway_group_name: gr1
+              rmi_peer: lol-apigw-admin01.test.sparebank1.no:40001
+              hap_srvnavn: apigw-admin01
+              rmisrv: localhost

@@ -1,3 +1,3 @@
 ---
 # ==========================================================================================
--  include_tasks : "stop-{{ ansible_distribution }}.yml"
+-  include_tasks : "restart-{{ ansible_distribution }}.yml"

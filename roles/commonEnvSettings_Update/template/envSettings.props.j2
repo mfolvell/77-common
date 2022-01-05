@@ -52,11 +52,6 @@ env.cache.rmiURL=//{{ rmisrv }}:40001/accessToken-rmt|//{{ rmisrv }}:40001/acces
 ## host envProperties
 rmi_peer = {{ rmi_peer }}
 
-# Analytics Database properties
-env.analytics.dburl={{ analytics_dburl }}
-env.analytics.dbuser={{ analytics_dbuser }}
-env.analytics.dbpassword={{ analytics_dbpassword }}
-
 # Api portal username and password (for accessing KPS data from policies)
 env.apiportal.username={{ api_portal_username  }}
 env.apiportal.password={{ api_portal_password }}
@@ -107,14 +102,14 @@ apimanager.ad.oadmin.role=NotInUseWebAPI
 apimanager.ad.user.role=NotInUseWebAPI
 
 # Global HTTP header incoming whitelist
-env.http.header.incoming.whitelist=Accept,Accept-Charset,Accept-Encoding,Accept-Language,Accept-Datetime,Authorization,Cache-Control,Connection,Cookie,Content-Length,Content-Type,Date,Forwarded,From,Host,Location,Origin,Pragma,Referer,User-Agent,Upgrade,Via,Warning,X-Forwarded-For,X-Forwarded-Host,X-Forwarded-Proto,AppKey,sst,rmt,financial_institution_id,financial_agreement_id,useAutomaticConsentScreen,ssn,rmt_expiration_date_time,agreement_ids,PartyID,Legal-Mandate,CorrelationID,AccountID,authorization,userinfo,X-Request-Id,X-Request-ID,X-User-Id,X-nonce,X-dynamicLinkingStamp,X-authmethod,X-clientIpAddress,X-bankRegNumber,X-idpType,customerID,AccountInfoRequestID,x-Nnin,x-Application-Id,x-User-Id,X-Bank-Number,x-bank-number,x-request-id,x-user-id,kar-bankregnum,kar-userid,x-org-number,x-customer-ssn,x-application-name,sb1sk-config,AdditionalReferenceID,AdditionalReferenceIDType,x-customer-agreement-id,x-cps-username,x-customer-org,x-sb1sktoken
+env.http.header.incoming.whitelist=Accept,Accept-Charset,Accept-Encoding,Accept-Language,Accept-Datetime,Authorization,Cache-Control,Connection,Cookie,Content-Length,Content-Type,Date,Forwarded,From,Host,Location,Origin,Pragma,Referer,User-Agent,Upgrade,Via,Warning,X-Forwarded-For,X-Forwarded-Host,X-Forwarded-Proto,AppKey,sst,rmt,financial_institution_id,financial_agreement_id,useAutomaticConsentScreen,ssn,rmt_expiration_date_time,agreement_ids,PartyID,Legal-Mandate,CorrelationID,AccountID,authorization,userinfo,X-Request-Id,X-Request-ID,X-User-Id,X-nonce,X-dynamicLinkingStamp,X-authmethod,X-clientIpAddress,X-bankRegNumber,X-idpType,customerID,AccountInfoRequestID,x-Nnin,x-Application-Id,x-User-Id,X-Bank-Number,x-bank-number,x-request-id,x-user-id,kar-bankregnum,kar-userid,x-org-number,x-customer-ssn,x-application-name,sb1sk-config,AdditionalReferenceID,AdditionalReferenceIDType,x-customer-agreement-id,x-cps-username,x-customer-org,x-sb1sktoken,TppId,TppName
 
 
 # Global HTTP header outgoing whitelist
 env.http.header.outgoing.whitelist=Access-Control-Allow-Origin,Accept-Patch,Accept-Ranges,Allow,Alt-Svc,Cache-Control,Connection,Content-Disposition,Content-Encoding,Content-Language,Content-Length,Content-Location,Content-Range,Content-Type,Date,ETag,Expires,Last-Modified,Link,Location,Pragma,Proxy-Authenticate,Public-Key-Pins,Refresh,Retry-After,Server,Set-Cookie,Status,Strict-Transport-Security,Trailer,Transfer-Encoding,TSV,Upgrade,Vary,WarnJaing,WWW-Authenticate,X-Correlation-ID,ConsentScreen,Status,X-Request-Id,X-Request-ID,X-User-Id,X-nonce,X-dynamicLinkingStamp,X-authmethod,X-clientIpAddress,X-bankRegNumber,numberOfPages,audience,AccountInfoRequestID
 
 # cassandra keyspace
-env.cassandra.keyspace={{ cassandra_keyspace }}
+env.cassandra.keyspace={{ cassandra_keyspace_77 }}
 
 # cassandra hosts
 env.cass01={{ cassandra_env01 }}
@@ -128,3 +123,5 @@ env.psd2.token.lifespan={{ token_lifespan }}
 # claim exp + iat (in secounds)
 # claim aud
 env.psd2.token.audience={{ psd2_token_audience   }}
+
+env.SERVICES.CONTENTSECURITYPOLICY=script-src 'self' https://axway.com/ https://*.axway.com 'unsafe-eval'; img-src 'self' https://*.axway.com data: blob:; style-src 'self' 'unsafe-inline' https://*.axway.com; font-src 'self' data: blob:; object-src 'self'; media-src 'self'; frame-src 'self';frame-ancestors 'none'; upgrade-insecure-requests

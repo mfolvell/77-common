@@ -24,17 +24,6 @@ manager_lisence_name: apiMgr.lic
 
 localCertUrl: https://localhost:8090
 
-# Analytics Database properties
-analytics_dburl: "jdbc:oracle:thin:@(DESCRIPTION_LIST= (LOAD_BALANCE=off)(FAILOVER=on)(DESCRIPTION= (LOAD_BALANCE=on)(CONNECT_TIMEOUT=10)(RETRY_COUNT=3)(ADDRESS_LIST= (ADDRESS=(PROTOCOL=TCP)(HOST=arac01-scan.qa.sparebank1.no)(PORT=1521))) (CONNECT_DATA=(SERVICE_NAME=svc_kunde_axway))) (DESCRIPTION= (LOAD_BALANCE=on)(CONNECT_TIMEOUT=10)(RETRY_COUNT=3) (ADDRESS_LIST= (ADDRESS=(PROTOCOL=TCP)(HOST=arac02.qa.sparebank1.no)(PORT=1521))) (CONNECT_DATA=(SERVICE_NAME=svc_kunde_axway))))"
-analytics_dbuser: "apigw"
-analytics_dbpassword: !vault |
-          $ANSIBLE_VAULT;1.1;AES256
-          30313266336363343737623562376237303866656537613462323165653363356533363836653239
-          3431613465646239626565656338613635653938366266300a356563663665613934363133663066
-          34366538396562313665366130333963653361646266326637666137303966653235373064653065
-          6636306562386563610a363165656633303133306538333837306366646230396464623639616136
-          3131
-
 # API Gateway sb1sk- services username and password
 gateway_sb1sk_username: "apigateway"
 gateway_sb1sk_password: !vault |
@@ -70,7 +59,7 @@ apimanager_ad_admin_role: "CN=Role-Prosjekt-Apne-Api-NSA,OU=Roles,OU=Groups,OU=N
 
 # cassandra keyspace
 cassandra_keyspace: "x8b2a57ef_feb0_4c5a_a72b_ac2e9825092d_group_2"
-cassandra_main_server: apigw-cass01.qa.sparebank1.no
+cassandra_keyspace_77: apigw_77_qa
 # cassandra hosts (is not overriden  is done based on which group the server belongs to )
 
 ### PSD2 settings
@@ -89,3 +78,5 @@ filebeat_username: !vault |
           3762633833626265650a646637396261346535626263646231313431306635643837623464653935
           61303338613532356431343736306263386166623466643864336636656338646262316636346333
           6666663066383930306539333164373135326365666431343464
+
+cassandra_cluster_name: API GW QA 

@@ -12,13 +12,6 @@ gateway_lisence_name: apiGateway.lic
 manager_lisence_name: apiMgr.lic
 
 localCertUrl: https://localhost:8090
-# Envsettings.props fields with overrides
-# Chache rmiURL
-
-# Analytics Database properties
-analytics_dburl: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=arac01-scan.test.sparebank1.no)(PORT=1521))(LOAD_BALANCE=YES)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=svc_kunde_axway)))
-analytics_dbuser: apigw
-analytics_dbpassword: apigw
 
 # API Gateway sb1sk- services username and password
 gateway_sb1sk_username: apigateway
@@ -43,7 +36,15 @@ apimanager_ad_admin_role: 'CN=Role-Prosjekt-Apne-Api-NSA,OU=Roles,OU=Groups,OU=N
 
 # cassandra keyspace
 cassandra_keyspace: evil_corp
-cassandra_main_server: lol-apigw-cass01.test.sparebank1.no
+
+cassandra01: lol-apigw-cass01
+cassandra02: lol-apigw-cass02
+cassandra03: lol-apigw-cass03
+cassandra04: lol-apigw-cass04
+cassandra05: lol-apigw-cass05
+cassandra06: lol-apigw-cass06
+
+cassandra_cluster_name: API GW TEST
 
 # cassandra hosts (is not overriden  is done based on which group the server belongs to )
 ### PSD2 settings
@@ -61,3 +62,4 @@ hap_hosts:
  - hap-test01.test.sparebank1.no
  - hap-test02.test.sparebank1.no
 hap_backends: lol_api_backend
+

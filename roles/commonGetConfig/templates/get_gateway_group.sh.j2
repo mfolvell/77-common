@@ -2,4 +2,4 @@
 # ================================================================
 gNo={{ gateway_group_name }}
 groupNo=$(jq --arg inputParam "$gNo" --slurp '.[].groups[] | select(.name==$inputParam) | .id' {{ api_gateway_home }}/groups/topology.json)
-echo "${groupNo//'"'}"
+echo ${groupNo//'"'}

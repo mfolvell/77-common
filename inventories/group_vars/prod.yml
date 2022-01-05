@@ -24,17 +24,6 @@ manager_lisence_name: apiMgr.lic
 
 localCertUrl: https://localhost:8090
 
-# Analytics Database properties
-analytics_dburl: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=arac01-scan.prod.sparebank1.no)(PORT=1521))(LOAD_BALANCE=YES)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=svc_kunde_axway)))
-analytics_dbuser: "apigw"
-analytics_dbpassword: !vault |
-          $ANSIBLE_VAULT;1.1;AES256
-          61666162393731313161356635313630346232313437383636626661366464643161636265373330
-          3639316466363364373361356335393837663630373030610a313866323937363365323139333439
-          62656430656463386638323635333534363933633564356438353364373633643266396137373138
-          6639373462393335630a326631636632613039663239353830333636663232306337633464323264
-          65363636323732393139353736613331616235336263633136316336396263353564
-
 # API Gateway sb1sk- services username and password
 gateway_sb1sk_username: "apigateway"
 gateway_sb1sk_password: !vault |
@@ -69,8 +58,8 @@ maskinporten_basepath: 'https://maskinporten.no'
 apimanager_ad_admin_role: "CN=Role-Axway-Api-Manager-NSA,OU=Roles,OU=Groups,OU=NSA,OU=Customers,DC=sb1a,DC=sparebank1,DC=no"
 
 # cassandra keyspace
-cassandra_keyspace: "x1b809e17_8843_4097_aee0_44828dddc1c8_group_2"
-cassandra_main_server: apigw-cass01.prod.sparebank1.no
+cassandra_keyspace: apigw_77_prod
+cassandra_keyspace_77: apigw_77_lol
 
 # cassandra hosts (is not overriden  is done based on which group the server belongs to )
 
@@ -90,3 +79,5 @@ filebeat_username: !vault |
           3736393937323834370a636563396136396537616165343865383664333764333161373961376564
           38633234316265313964303436356334346534353562623364323137383530653762376665636437
           3066366563613634323365343130653330356562633335386437
+
+cassandra_cluster_name: API GW PROD
