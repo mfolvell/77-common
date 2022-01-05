@@ -3,7 +3,7 @@
 
     <groupId>ansible</groupId>
     <artifactId>77-common</artifactId>
-    <version>77.0.1-SNAPSHOT</version>
+    <version>77.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>77-common</name>
