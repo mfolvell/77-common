@@ -18,6 +18,8 @@ appInstallationUser: root
 appRunUser: axway
 appCassandraUser: cassandra
 
+localCertUrl: https://localhost:8090
+
 # Cassandra
 
 cassandra_dir_2212 : /opt/cassandra-2212
@@ -36,6 +38,9 @@ cassandra03: apigw-cass03
 cassandra04: apigw-cass04
 cassandra05: apigw-cass05
 cassandra06: apigw-cass06
+
+gateway_lisence_name: apiGateway.lic
+manager_lisence_name: apiMgr.lic
 
 # 77
 AxwayBasePath_77: /opt/Axway-7.7

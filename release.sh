@@ -3,11 +3,11 @@ set -e
 set -u
 git remote update
 if git diff-index --quiet HEAD --; then
-   echo "There is no local change.  release can continue"
+   echo "Det er INGEN lokale endringer.  release kan fortsette"
 else
-   echo "WARNING! Your branch has diverged from origin."
-   echo "You may consider running git pull/push before releasing"
-   read -p "Continue anyway [Yn]? " -n 1 -r
+   echo "ADVARSEL! Din branch haer lokale endringer som IKKE er commitet."
+   echo "Du bør vurdere git pull/push før kjøring av relase"
+   read -p "Forsette [Yn]? " -n 1 -r
    echo
    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
      echo "aborted"
@@ -18,13 +18,13 @@ fi
 ver=$( xmllint --xpath "/*[name()='project']/*[name()='version']/text()" pom.xml )
 version=${ver//-SNAPSHOT/}
 
-echo "Creating release for version: "$version
-read -p "Continue [Yn]? " -n 1 -r
+echo "Lage release for version: "$version
+read -p "Fortsette [Yn]? " -n 1 -r
 
 git tag -a "v$version" -m "Releasing version $version"
 
 branch_name="release/v$version"
-echo "Ny branch branch_name" "$branch_name"
+echo "Ny release branch" "$branch_name"
 git branch "release/v$version"
 git push -u origin "$branch_name"
 git co master

@@ -15,14 +15,15 @@ api_portal_password: !vault |
           37313635616333306632626363373031656132633466633065383164646665626234623666663030
           3931626230643061650a336533663765613163336631346231313065376536626631613834643765
           36323238623930313132326637373733383339363334306165366534333066386636
-
+api_rnm_password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          66373136613931663065646666656562623535306234633561336665316539626133633535336662
+          6636343162313866663636383237363164333563353639370a373462626461306539656564343162
+          32323466386138373830656538643332336633353365363765376266373662616138336163396631
+          3165663231386531630a623833396438333239343239366237343737626530383964643338383134
+          34306463626364353535623734636536356134363331623933633539313338633139
 zabbixServerGroupDesc: apigw-admin03.prod, apigw-admin04.prod, apigw03.prod og apigw04.prod
 displayAnsibleMessages: true
-
-gateway_lisence_name: apiGateway.lic
-manager_lisence_name: apiMgr.lic
-
-localCertUrl: https://localhost:8090
 
 # API Gateway sb1sk- services username and password
 gateway_sb1sk_username: "apigateway"
@@ -58,10 +59,9 @@ maskinporten_basepath: 'https://maskinporten.no'
 apimanager_ad_admin_role: "CN=Role-Axway-Api-Manager-NSA,OU=Roles,OU=Groups,OU=NSA,OU=Customers,DC=sb1a,DC=sparebank1,DC=no"
 
 # cassandra keyspace
-cassandra_keyspace: apigw_77_prod
-cassandra_keyspace_77: apigw_77_lol
-
-# cassandra hosts (is not overriden  is done based on which group the server belongs to )
+cassandra_keyspace: "x1b809e17_8843_4097_aee0_44828dddc1c8_group_2"
+cassandra_keyspace_77: apigw_77
+cassandra_cluster_name: API GW PROD
 
 ### PSD2 settings
 issuer: "https://api-prod.sparebank1.no"
@@ -80,4 +80,7 @@ filebeat_username: !vault |
           38633234316265313964303436356334346534353562623364323137383530653762376665636437
           3066366563613634323365343130653330356562633335386437
 
-cassandra_cluster_name: API GW PROD
+# lokale variable relatert til sletting av rmt fra cassandra
+apigw_admin: apigw-admin03.prod.sparebank1.no
+apigwBasePath: https://{{ apigw_admin }}/api/router/service/
+apigwInstance: instance-1

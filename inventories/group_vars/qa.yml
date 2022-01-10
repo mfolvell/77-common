@@ -59,8 +59,8 @@ apimanager_ad_admin_role: "CN=Role-Prosjekt-Apne-Api-NSA,OU=Roles,OU=Groups,OU=N
 
 # cassandra keyspace
 cassandra_keyspace: "x8b2a57ef_feb0_4c5a_a72b_ac2e9825092d_group_2"
-cassandra_keyspace_77: apigw_77_qa
-# cassandra hosts (is not overriden  is done based on which group the server belongs to )
+cassandra_keyspace_77: apigw_77
+cassandra_cluster_name: API GW QA 
 
 ### PSD2 settings
 issuer: "https://api.qa.sparebank1.no"
@@ -79,4 +79,7 @@ filebeat_username: !vault |
           61303338613532356431343736306263386166623466643864336636656338646262316636346333
           6666663066383930306539333164373135326365666431343464
 
-cassandra_cluster_name: API GW QA 
+# lokale variable relatert til sletting av rmt fra cassandra
+apigw_admin: apigw-admin03.qa.sparebank1.no
+apigwBasePath: https://{{ apigw_admin }}/api/router/service/
+apigwInstance: instance-1

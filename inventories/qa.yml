@@ -63,10 +63,6 @@ qa:
                   rmi_peer: apigw01.qa.sparebank1.no:40001
                   hap_srvnavn: apigw02
                   rmisrv: apigw01.qa.sparebank1.no
-        allServers:
-          hosts:
-            apigw-admin01.qa.sparebank1.no:
-              axwaytype: admin
         admin762:
           hosts:
             apigw-admin03.qa.sparebank1.no:
