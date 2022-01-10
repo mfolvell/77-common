@@ -36,6 +36,7 @@ apimanager_ad_admin_role: 'CN=Role-Prosjekt-Apne-Api-NSA,OU=Roles,OU=Groups,OU=N
 
 # cassandra keyspace
 cassandra_keyspace: evil_corp
+cassandra_keyspace_77: apigw_77
 
 cassandra01: lol-apigw-cass01
 cassandra02: lol-apigw-cass02
