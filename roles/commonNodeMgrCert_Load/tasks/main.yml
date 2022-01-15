@@ -1,9 +1,0 @@
----
-# ==========================================================================================
-# Link to doc:
-#    https://docs.axway.com/bundle/APIPortal_762_InstallationGuide_allOS_en_HTML5/page/Content/APIPortalInstallGuideTopics/install_nodeps.htm#Install2
-
-
-# ==========================================================================================
-#  Installasjon av php
--  include_tasks : "loadCert-{{ ansible_distribution }}.yml"

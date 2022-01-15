@@ -24,9 +24,9 @@ manager_lisence_name: apiMgr.lic
 
 localCertUrl: https://localhost:8090
 
-# API Gateway sb1sk- services username and password
-gateway_sb1sk_username: "apigateway"
-gateway_sb1sk_password: !vault |
+# API Gateway xx1sk- services username and password
+gateway_xx1sk_username: "apigateway"
+gateway_xx1sk_password: !vault |
           $ANSIBLE_VAULT;1.1;AES256
           37383539333731623965623736353236623139663730366663356663663564333739373833356338
           3031356661353432656138373564653939356565366139300a663165666566313739303934303535
@@ -45,25 +45,25 @@ gateway_esb_password: !vault |
           3136
 
 # Whitelist for CSRF protection, primarily for allowing a load balancer
-csrf_whitelist: '^https?:\/\/api-manager\.qa\.sparebank1\.no'
+csrf_whitelist: '^https?:\/\/api-manager\.qa\.customer\.no'
 
 # Integration URLs
 stage: qa
-sb1sk_basepath: 'https://api-sb1sk.qa.sparebank1.no:443'
-apiautorisasjon_basepath: "https://internal-api-backend.qa.sparebank1.no"
+xx1sk_basepath: 'https://api-xx1sk.qa.customer.no:443'
+apiautorisasjon_basepath: "https://internal-api-backend.qa.customer.no"
 difi_basepath: "https://oidc-ver2.difi.no"
 maskinporten_basepath: 'https://ver2.maskinporten.no'
 
 # Used by ldap autentication in API-Manager
-apimanager_ad_admin_role: "CN=Role-Prosjekt-Apne-Api-NSA,OU=Roles,OU=Groups,OU=NSA,OU=Customers,DC=sb1a,DC=sparebank1,DC=no"
+apimanager_ad_admin_role: "CN=Role-Prosjekt-Apne-Api-NSA,OU=Roles,OU=Groups,OU=NSA,OU=Customers,DC=xx1a,DC=customer,DC=no"
 
 # cassandra keyspace
 cassandra_keyspace: "x8b2a57ef_feb0_4c5a_a72b_ac2e9825092d_group_2"
-cassandra_keyspace_77: apigw_77
-cassandra_cluster_name: API GW QA 
+cassandra_keyspace_77: apigw_77_qa
+# cassandra hosts (is not overriden  is done based on which group the server belongs to )
 
 ### PSD2 settings
-issuer: "https://api.qa.sparebank1.no"
+issuer: "https://api.qa.customer.no"
 # claim iss
 token_lifespan: 240
 # claim exp + iat (in secounds)
@@ -79,7 +79,4 @@ filebeat_username: !vault |
           61303338613532356431343736306263386166623466643864336636656338646262316636346333
           6666663066383930306539333164373135326365666431343464
 
-# lokale variable relatert til sletting av rmt fra cassandra
-apigw_admin: apigw-admin03.qa.sparebank1.no
-apigwBasePath: https://{{ apigw_admin }}/api/router/service/
-apigwInstance: instance-1
+cassandra_cluster_name: API GW QA 

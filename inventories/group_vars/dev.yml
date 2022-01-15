@@ -1,0 +1,53 @@
+#  Local setting valid for only this environment
+api_gateway_username: admin
+api_gateway_password: changeme
+api_portal_username: apiadmin
+api_portal_password: changeme
+api_rnm_password: changeme
+
+zabbixServerGroupDesc: dev-apigw-admin01.test, dev-apigw-admin02.test, dev-apigw01.test og dev-apigw02.test
+displayAnsibleMessages: false
+
+gateway_lisence_name: apiGateway.lic
+manager_lisence_name: apiMgr.lic
+
+localCertUrl: https://localhost:8090
+
+# Whitelist for CSRF protection, primarily for allowing a load balancer
+csrf_whitelist: '^https?:\/\/api-manager\.lol\.customer\.no'
+
+# Integration URLs
+stage: lol
+
+# Used by ldap autentication in API-Manager
+apimanager_ad_admin_role: 'CN=Role-Prosjekt-Apne-Api-NSA,OU=Roles,OU=Groups,OU=NSA,OU=Customers,DC=xx1a,DC=customer,DC=no'
+
+# cassandra keyspace
+cassandra_keyspace: evil_corp
+
+cassandra01: dev-apigw-cass01
+cassandra02: dev-apigw-cass02
+cassandra03: dev-apigw-cass03
+cassandra04: dev-apigw-cass04
+cassandra05: dev-apigw-cass05
+cassandra06: dev-apigw-cass06
+
+cassandra_cluster_name: API GW TEST
+
+# cassandra hosts (is not overriden  is done based on which group the server belongs to )
+### PSD2 settings
+issuer: 'https://dev-api-internal.test.customer.no'
+# claim iss
+token_lifespan: 240
+# claim exp + iat (in secounds)
+psd2_token_audience: 'evry-psd2-platform'
+
+# Filebeat
+filebeat_username: gOy2kORDtU6QmPxQho0P9SqdsGgvUB3S61m3TzpcnK1J
+
+# HAP verdier brukt av selvbetjening
+hap_hosts: 
+ - hap-test01.test.customer.no
+ - hap-test02.test.customer.no
+hap_backends: lol_api_backend
+

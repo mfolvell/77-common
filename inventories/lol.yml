@@ -3,80 +3,88 @@ lol:
     servers:
       children:
         adminServers:
+          vars:
+            hap_hosts:
+              - hap-test03.test.customer.no
+              - hap-test04.test.customer.no
+            hap_backends:
+              - api_manager_backend
+              - api_manager_http_backend
+              - apigw_manager_backend
           children:
             admin01:
               hosts:
-                apigw-admin03.test.sparebank1.no:
+                dev-apigw-admin01.test.customer.no:
                   axwaytype: domainAdmin
                   hostnameShort: apigw-admin03
                   anmHost:
                   gateway_group_name: gr1
-                  rmi_peer: apigw-admin03.test.sparebank1.no:40001
-                  hap_srvnavn: apigw-admin03
+                  rmi_peer: dev-apigw-admin01.test.customer.no:40001
+                  hap_srvnavn: apigw-admin01
                   rmisrv: localhost
             admin02:
               hosts:               
-                apigw-admin04.test.sparebank1.no:
+                dev-apigw-admin02.test.customer.no:
                   axwaytype: admin
-                  hostnameShort: apigw-admin04
-                  anmHost: apigw-admin03.test.sparebank1.no
+                  hostnameShort: apigw-admin02
+                  anmHost: dev-apigw-admin01.test.customer.no
                   gateway_group_name: gr2
-                  rmi_peer: apigw-admin03.test.sparebank1.no:40001
-                  hap_srvnavn: apigw-admin04
+                  rmi_peer: dev-apigw-admin01.test.customer.no:40001
+                  hap_srvnavn: apigw-admin02
                   rmisrv: localhost
         gatewayServers:
           children:
             apigw01:
               hosts:
-                apigw03.test.sparebank1.no:
+                dev-apigw01.test.customer.no:
                   axwaytype: admin
-                  hostnameShort: apigw03
-                  anmHost: apigw-admin03.test.sparebank1.no
+                  hostnameShort: apigw01
+                  anmHost: dev-apigw-admin01.test.customer.no
                   gateway_group_name: gr1
-                  rmi_peer: apigw03.test.sparebank1.no:40001
-                  hap_srvnavn: apigw03
-                  rmisrv: apigw03.test.sparebank1.no
+                  rmi_peer: dev-apigw01.test.customer.no:40001
+                  hap_srvnavn: apigw01
+                  rmisrv: dev-apigw01.test.customer.no
             apigw02:
               hosts:
-                apigw04.test.sparebank1.no:
+                dev-apigw02.test.customer.no:
                   axwaytype: admin
-                  hostnameShort: apigw04
-                  anmHost: apigw-admin04.test.sparebank1.no
+                  hostnameShort: apigw02
+                  anmHost: dev-apigw-admin02.test.customer.no
                   gateway_group_name: gr2
-                  rmi_peer: apigw03.test.sparebank1.no:40001
+                  rmi_peer: dev-apigw01.test.customer.no:40001
                   hap_srvnavn: apigw04
-                  rmisrv: apigw04.test.sparebank1.no
+                  rmisrv: dev-apigw02.test.customer.no
         allServers:
           hosts:
-            lol-apigw01.test.sparebank1.no:
+            dev-apigw01.test.customer.no:
               axwaytype: admin
         admin762:
           hosts:
-            apigw-admin01.test.sparebank1.no:
+            apigw-admin01.test.customer.no:
               gateway_group_name: gr1
         cassandraServers:
           hosts:
-            lol-apigw-cass01.test.sparebank1.no:
+            dev-apigw-cass01.test.customer.no:
                 cassandra_seeds: apigw-cass01, apigw-cass03, apigw-cass02, apigw-cass04
                 cassandra_dc: datacenter1
                 cassandra_rack: rack1
-            lol-apigw-cass02.test.sparebank1.no:
+            dev-apigw-cass02.test.customer.no:
                 cassandra_seeds: apigw-cass02, apigw-cass04, apigw-cass01, apigw-cass03
                 cassandra_dc: datacenter2
                 cassandra_rack: rack1
-            lol-apigw-cass03.test.sparebank1.no:
+            dev-apigw-cass03.test.customer.no:
                 cassandra_seeds: apigw-cass01, apigw-cass03, apigw-cass02, apigw-cass04
                 cassandra_dc: datacenter1
                 cassandra_rack: rack2
-            lol-apigw-cass04.test.sparebank1.no:
+            dev-apigw-cass04.test.customer.no:
                 cassandra_seeds: apigw-cass02, apigw-cass04, apigw-cass01, apigw-cass03
                 cassandra_dc: datacenter2
                 cassandra_rack: rack2
-            lol-apigw-cass05.test.sparebank1.no:
+            dev-apigw-cass05.test.customer.no:
                 cassandra_seeds: apigw-cass01, apigw-cass03, apigw-cass02, apigw-cass04
                 cassandra_dc: datacenter1
                 cassandra_rack: rack3
-            lol-apigw-cass06.test.sparebank1.no:
+            dev-apigw-cass06.test.customer.no:
                 cassandra_seeds: apigw-cass02, apigw-cass04, apigw-cass01, apigw-cass03
                 cassandra_dc: datacenter2
                 cassandra_rack: rack3

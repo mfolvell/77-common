@@ -21,7 +21,7 @@ filebeat.inputs:
 
 
 output.elasticsearch:
-  hosts: ["https://humio-ingest.prod-int.sparebank1.no:443/api/v1/ingest/elastic-bulk"]
+  hosts: ["https://humio-ingest.prod-int.customer.no:443/api/v1/ingest/elastic-bulk"]
   username: {{ filebeat_username }}
   compression_level: 5
   bulk_max_size: 200

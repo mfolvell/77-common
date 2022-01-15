@@ -60,9 +60,9 @@ env.apiportal.password={{ api_portal_password }}
 env.apigw.username={{ api_gateway_username }}
 env.apigw.password={{ api_gateway_password }}
 
-# API Gateway sb1sk- services username and password
-env.gateway.sb1sk.username={{ gateway_sb1sk_username }}
-env.gateway.sb1sk.password={{ gateway_sb1sk_password }}
+# API Gateway xx1sk- services username and password
+env.gateway.xx1sk.username={{ gateway_xx1sk_username }}
+env.gateway.xx1sk.password={{ gateway_xx1sk_password }}
 
 # API Gateway esb - services username and password
 env.gateway.esb.username={{ gateway_esb_username }}
@@ -86,10 +86,10 @@ env.consentscreen.automaticredirect.path=${environment.VDISTDIR}/samples/oauth/t
 
 # Integration URLs
 env.apiautorisasjon.basepath={{ apiautorisasjon_basepath }}
-env.financialinstitutionapp.basepath=https://api-financialinstitutions.{{ stage }}.sparebank1.no
-env.loginapp.internal.basepath=https://login-beta.{{ stage }}.sparebank1.no
-env.loginapp.basepath=https://login-beta.{{ stage }}.sparebank1.no
-env.sb1sk.basepath={{ sb1sk_basepath }}
+env.financialinstitutionapp.basepath=https://api-financialinstitutions.{{ stage }}.customer.no
+env.loginapp.internal.basepath=https://login-beta.{{ stage }}.customer.no
+env.loginapp.basepath=https://login-beta.{{ stage }}.customer.no
+env.xx1sk.basepath={{ xx1sk_basepath }}
 env.difi.basepath={{ difi_basepath }}
 env.maskinporten.basepath={{ maskinporten_basepath }}
 
@@ -102,7 +102,7 @@ apimanager.ad.oadmin.role=NotInUseWebAPI
 apimanager.ad.user.role=NotInUseWebAPI
 
 # Global HTTP header incoming whitelist
-env.http.header.incoming.whitelist=Accept,Accept-Charset,Accept-Encoding,Accept-Language,Accept-Datetime,Authorization,Cache-Control,Connection,Cookie,Content-Length,Content-Type,Date,Forwarded,From,Host,Location,Origin,Pragma,Referer,User-Agent,Upgrade,Via,Warning,X-Forwarded-For,X-Forwarded-Host,X-Forwarded-Proto,AppKey,sst,rmt,financial_institution_id,financial_agreement_id,useAutomaticConsentScreen,ssn,rmt_expiration_date_time,agreement_ids,PartyID,Legal-Mandate,CorrelationID,AccountID,authorization,userinfo,X-Request-Id,X-Request-ID,X-User-Id,X-nonce,X-dynamicLinkingStamp,X-authmethod,X-clientIpAddress,X-bankRegNumber,X-idpType,customerID,AccountInfoRequestID,x-Nnin,x-Application-Id,x-User-Id,X-Bank-Number,x-bank-number,x-request-id,x-user-id,kar-bankregnum,kar-userid,x-org-number,x-customer-ssn,x-application-name,sb1sk-config,AdditionalReferenceID,AdditionalReferenceIDType,x-customer-agreement-id,x-cps-username,x-customer-org,x-sb1sktoken,TppId,TppName
+env.http.header.incoming.whitelist=Accept,Accept-Charset,Accept-Encoding,Accept-Language,Accept-Datetime,Authorization,Cache-Control,Connection,Cookie,Content-Length,Content-Type,Date,Forwarded,From,Host,Location,Origin,Pragma,Referer,User-Agent,Upgrade,Via,Warning,X-Forwarded-For,X-Forwarded-Host,X-Forwarded-Proto,AppKey,sst,rmt,financial_institution_id,financial_agreement_id,useAutomaticConsentScreen,ssn,rmt_expiration_date_time,agreement_ids,PartyID,Legal-Mandate,CorrelationID,AccountID,authorization,userinfo,X-Request-Id,X-Request-ID,X-User-Id,X-nonce,X-dynamicLinkingStamp,X-authmethod,X-clientIpAddress,X-bankRegNumber,X-idpType,customerID,AccountInfoRequestID,x-Nnin,x-Application-Id,x-User-Id,X-Bank-Number,x-bank-number,x-request-id,x-user-id,kar-bankregnum,kar-userid,x-org-number,x-customer-ssn,x-application-name,xx1sk-config,AdditionalReferenceID,AdditionalReferenceIDType,x-customer-agreement-id,x-cps-username,x-customer-org,x-xx1sktoken,TppId,TppName
 
 
 # Global HTTP header outgoing whitelist
