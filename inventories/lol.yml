@@ -3,14 +3,6 @@ lol:
     servers:
       children:
         adminServers:
-          vars:
-            hap_hosts:
-              - hap-test03.test.customer.no
-              - hap-test04.test.customer.no
-            hap_backends:
-              - api_manager_backend
-              - api_manager_http_backend
-              - apigw_manager_backend
           children:
             admin01:
               hosts:

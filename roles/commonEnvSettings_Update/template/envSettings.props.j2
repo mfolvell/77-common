@@ -64,9 +64,6 @@ env.apigw.password={{ api_gateway_password }}
 env.gateway.xx1sk.username={{ gateway_xx1sk_username }}
 env.gateway.xx1sk.password={{ gateway_xx1sk_password }}
 
-# API Gateway esb - services username and password
-env.gateway.esb.username={{ gateway_esb_username }}
-env.gateway.esb.password={{ gateway_esb_password }}
 
 # Whitelist for CSRF protection, primarily for allowing a load balancer
 env.csrf.whitelist={{ csrf_whitelist }}
@@ -83,15 +80,6 @@ env.cache.idporten.jwk.timetoliveseconds=60
 # OAuth consent screen URLs
 env.consentscreen.manualredirect.path=${environment.VDISTDIR}/samples/oauth/templates/requestAccess.html
 env.consentscreen.automaticredirect.path=${environment.VDISTDIR}/samples/oauth/templates/requestAccessAutomatically.html
-
-# Integration URLs
-env.apiautorisasjon.basepath={{ apiautorisasjon_basepath }}
-env.financialinstitutionapp.basepath=https://api-financialinstitutions.{{ stage }}.customer.no
-env.loginapp.internal.basepath=https://login-beta.{{ stage }}.customer.no
-env.loginapp.basepath=https://login-beta.{{ stage }}.customer.no
-env.xx1sk.basepath={{ xx1sk_basepath }}
-env.difi.basepath={{ difi_basepath }}
-env.maskinporten.basepath={{ maskinporten_basepath }}
 
 # Used by openconnect id flows
 env.oidconnect.certificate=/[Certificates]/[Certificate]dname=openid-connect-sign

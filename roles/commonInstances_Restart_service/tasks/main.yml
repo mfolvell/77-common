@@ -1,3 +1,11 @@
----
+# ---
 # ==========================================================================================
--  include_tasks : "restart-{{ ansible_distribution }}.yml"
+- name: Restart instanse med systemd service
+  systemd:
+    state: restarted
+    name: axway-instance
+  become: True
+
+- pause:
+    seconds: 1
+# ==========================================================================================

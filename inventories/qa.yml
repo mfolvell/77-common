@@ -3,14 +3,6 @@ qa:
     servers:
       children:
         adminServers:
-          vars:
-            hap_hosts:
-              - hap-kontor01.qa.customer.no
-              - hap-kontor02.qa.customer.no
-            hap_backends:
-              - api_manager_backend
-              - api_manager_http_backend
-              - apigw_manager_backend
           children:
             admin01:
               hosts:
@@ -33,15 +25,6 @@ qa:
                   hap_srvnavn: apigw-admin02
                   rmisrv: localhost
         gatewayServers:
-          vars:
-            hap_hosts:
-              - hap-kunde01.qa.customer.no
-              - hap-kunde02.qa.customer.no
-            hap_backends:
-              - api_internal_backend
-              - b2bapi_backend
-              - xx1_axway_api_gw_backend
-              - xx1_axway_api_oauth2_backend
           children:
             apigw01:
               hosts:

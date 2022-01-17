@@ -1,3 +1,10 @@
----
+- name:  Restart nodemanager med systemd service
+  systemd:
+    state: started
+    name: axway-nodemanager
+  become: True
+
+- pause:
+    minutes: 1
 # ==========================================================================================
--  include_tasks : "start-{{ ansible_distribution }}.yml"
+

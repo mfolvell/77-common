@@ -1,3 +1,11 @@
----
+# ---
 # ==========================================================================================
--  include_tasks : "start-{{ ansible_distribution }}.yml"
+- name: Start instanse med systemd service
+  systemd:
+    state: started
+    name: axway-instance
+  become: True
+
+- pause:
+    minutes: 1
+# ==========================================================================================
