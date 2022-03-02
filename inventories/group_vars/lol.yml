@@ -64,3 +64,8 @@ hap_hosts:
  - hap-test02.test.sparebank1.no
 hap_backends: lol_api_backend
 
+# lokale variable relatert til sletting av rmt fra cassandra
+apigw_admin: apigw-admin01.test.sparebank1.no
+apigwBasePath: https://{{ apigw_admin }}/api/router/service/
+apigwInstance: instance-1
+
