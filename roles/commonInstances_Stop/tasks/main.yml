@@ -1,3 +1,6 @@
----
+# ---
 # ==========================================================================================
--  include_tasks : "stop-{{ ansible_distribution }}.yml"
+- name: Stop instanse command ({{ appRunUser }}) -> "{{ axway_bin }}/startinstance -n {{ hostnameShort }} -g {{ gateway_group_name }} -k"
+  command: "{{ axway_bin }}/startinstance -n {{ hostnameShort }} -g {{ gateway_group_name }} -k"
+  become_user: "{{ appRunUser }}"
+# ==========================================================================================

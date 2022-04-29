@@ -11,16 +11,16 @@
 
 - name: Set variable for gr1
   set_fact:
-     cassandra_env01: "{{cassandra01}}"
-     cassandra_env02: "{{cassandra03}}"
-     cassandra_env03: "{{cassandra05}}"
+     cassandra_env01: "{{ cassandra01 }}"
+     cassandra_env02: "{{ cassandra03 }}"
+     cassandra_env03: "{{ cassandra05 }}"
   when: gateway_group_name == "gr1"
 
 - name: Set variable for gr2
   set_fact:
-     cassandra_env01: "{{cassandra02}}"
-     cassandra_env02: "{{cassandra04}}"
-     cassandra_env03: "{{cassandra06}}"
+     cassandra_env01: "{{ cassandra02 }}"
+     cassandra_env02: "{{ cassandra04 }}"
+     cassandra_env03: "{{ cassandra06 }}"
   when: gateway_group_name == "gr2"
 
 - name: Template a file to {{ path_update }}/envSettings.props

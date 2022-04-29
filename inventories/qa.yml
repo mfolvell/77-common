@@ -3,93 +3,80 @@ qa:
     servers:
       children:
         adminServers:
-          vars:
-            hap_hosts:
-              - hap-kontor01.qa.sparebank1.no
-              - hap-kontor02.qa.sparebank1.no
-            hap_backends:
-              - api_manager_backend
-              - api_manager_http_backend
-              - apigw_manager_backend
           children:
             admin01:
               hosts:
-                apigw-admin01.qa.sparebank1.no:
+                apigw-admin01.qa.customer.no:
                   axwaytype: domainAdmin
                   hostnameShort: apigw-admin01
                   anmHost:
                   gateway_group_name: gr1
-                  rmi_peer: apigw-admin02.qa.sparebank1.no:40001
+                  rmi_peer: apigw-admin02.qa.customer.no:40001
                   hap_srvnavn: apigw-admin01
                   rmisrv: localhost
             admin02:
               hosts:                  
-                apigw-admin02.qa.sparebank1.no:
+                apigw-admin02.qa.customer.no:
                   axwaytype: admin
                   hostnameShort: apigw-admin02
-                  anmHost: apigw-admin01.qa.sparebank1.no
+                  anmHost: apigw-admin01.qa.customer.no
                   gateway_group_name: gr2
-                  rmi_peer: apigw-admin01.qa.sparebank1.no:40001
+                  rmi_peer: apigw-admin01.qa.customer.no:40001
                   hap_srvnavn: apigw-admin02
                   rmisrv: localhost
         gatewayServers:
-          vars:
-            hap_hosts:
-              - hap-kunde01.qa.sparebank1.no
-              - hap-kunde02.qa.sparebank1.no
-            hap_backends:
-              - api_internal_backend
-              - b2bapi_backend
-              - sb1_axway_api_gw_backend
-              - sb1_axway_api_oauth2_backend
           children:
             apigw01:
               hosts:
-                apigw01.qa.sparebank1.no:
+                apigw01.qa.customer.no:
                   axwaytype: admin
                   hostnameShort: apigw01
-                  anmHost: apigw-admin01.qa.sparebank1.no
+                  anmHost: apigw-admin01.qa.customer.no
                   gateway_group_name: gr1
-                  rmi_peer: apigw02.qa.sparebank1.no:40001
+                  rmi_peer: apigw02.qa.customer.no:40001
                   hap_srvnavn: apigw01
-                  rmisrv: apigw02.qa.sparebank1.no
+                  rmisrv: apigw02.qa.customer.no
             apigw02:
               hosts:
-                apigw02.qa.sparebank1.no:
+                apigw02.qa.customer.no:
                   axwaytype: admin
                   hostnameShort: apigw02
-                  anmHost: apigw-admin02.qa.sparebank1.no
+                  anmHost: apigw-admin02.qa.customer.no
                   gateway_group_name: gr2
-                  rmi_peer: apigw01.qa.sparebank1.no:40001
+                  rmi_peer: apigw01.qa.customer.no:40001
                   hap_srvnavn: apigw02
-                  rmisrv: apigw01.qa.sparebank1.no
+                  rmisrv: apigw01.qa.customer.no
+        allServers:
+          hosts:
+            apigw-admin01.qa.customer.no:
+              axwaytype: admin
         admin762:
           hosts:
-            apigw-admin03.qa.sparebank1.no:
+            apigw-admin03.qa.customer.no:
               gateway_group_name: gr1
         cassandraServers:
           hosts:
-            apigw-cass01.qa.sparebank1.no:
+            apigw-cass01.qa.customer.no:
                 cassandra_seeds: apigw-cass01, apigw-cass03, apigw-cass02, apigw-cass04
                 cassandra_dc: datacenter1
                 cassandra_rack: rack1            
-            apigw-cass02.qa.sparebank1.no:
+            apigw-cass02.qa.customer.no:
                 cassandra_seeds: apigw-cass02, apigw-cass04, apigw-cass01, apigw-cass03
                 cassandra_dc: datacenter2
                 cassandra_rack: rack1            
-            apigw-cass03.qa.sparebank1.no:
+            apigw-cass03.qa.customer.no:
                 cassandra_seeds: apigw-cass01, apigw-cass03, apigw-cass02, apigw-cass04
                 cassandra_dc: datacenter1
                 cassandra_rack: rack2            
-            apigw-cass04.qa.sparebank1.no:
+            apigw-cass04.qa.customer.no:
                 cassandra_seeds: apigw-cass02, apigw-cass04, apigw-cass01, apigw-cass03
                 cassandra_dc: datacenter2
                 cassandra_rack: rack2            
-            apigw-cass05.qa.sparebank1.no:
+            apigw-cass05.qa.customer.no:
                 cassandra_seeds: apigw-cass01, apigw-cass03, apigw-cass02, apigw-cass04
                 cassandra_dc: datacenter1
                 cassandra_rack: rack3            
-            apigw-cass06.qa.sparebank1.no:
+            apigw-cass06.qa.customer.no:
                 cassandra_seeds: apigw-cass02, apigw-cass04, apigw-cass01, apigw-cass03
                 cassandra_dc: datacenter2
                 cassandra_rack: rack3            
