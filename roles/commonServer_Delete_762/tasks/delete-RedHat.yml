@@ -1,6 +1,0 @@
-# ---
-- name: Delete instance command ({{ appRunUser }})-> "{{ axway_bin }}/managedomain ---delete-instance --name lol-apigw-admin02 --username {{ api_manager_username }} --password {{ api_gateway_password }} -g {{ gateway_group_name }})"
-  command: "{{ axway_bin }}/managedomain ---delete-instance --name lol-apigw-admin02 --username {{ api_manager_username }} --password {{ api_gateway_password }} -g {{ gateway_group_name }})"
-  become_user: "{{ appRunUser }}"
-  args:
-    chdir: "{{ axway_bin }}"

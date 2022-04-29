@@ -1,7 +1,0 @@
----
-# ===================================================================
-
-- name: Stoping service cassandra
-  service:
-    name: cassandra
-    state: stopped

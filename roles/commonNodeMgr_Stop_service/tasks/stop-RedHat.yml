@@ -1,8 +1,0 @@
-# ---
-# ==========================================================================================
-#
-- name:  Stop nodemanager med systemd service
-  systemd:
-    state: stopped
-    name: axway-nodemanager
-  become: True

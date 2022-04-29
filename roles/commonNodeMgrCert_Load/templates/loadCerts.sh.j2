@@ -1,6 +1,0 @@
-#!/bin/bash
-# ================================================================
-
-cd {{ api_gateway_home }}/samples/scripts
-
-./run.sh certs/addCertsFromSSL.py -g {{ gateway_group_name }} -n {{ hostnameShort }} -u {{ api_gateway_username }} -p {{ api_gateway_password }} --certURL={{ localCertUrl }}

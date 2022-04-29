@@ -5,18 +5,19 @@ api_portal_username: apiadmin
 api_portal_password: changeme
 api_rnm_password: changeme
 
-zabbixServerGroupDesc: apigw-admin01.test, apigw-admin02.test, apigw01.test og apigw02.test
+zabbixServerGroupDesc: dev-apigw-admin01.test, dev-apigw-admin02.test, dev-apigw01.test og dev-apigw02.test
 displayAnsibleMessages: false
 
 gateway_lisence_name: apiGateway.lic
 manager_lisence_name: apiMgr.lic
 
 localCertUrl: https://localhost:8090
+
 # Whitelist for CSRF protection, primarily for allowing a load balancer
-csrf_whitelist: '^https?:\/\/api-manager\.test\.customer\.no'
+csrf_whitelist: '^https?:\/\/api-manager\.lol\.customer\.no'
 
 # Integration URLs
-stage: test
+stage: lol
 
 # Used by ldap autentication in API-Manager
 apimanager_ad_admin_role: 'CN=Role-Prosjekt-Apne-Api-NSA,OU=Roles,OU=Groups,OU=NSA,OU=Customers,DC=xx1a,DC=customer,DC=no'
@@ -24,21 +25,24 @@ apimanager_ad_admin_role: 'CN=Role-Prosjekt-Apne-Api-NSA,OU=Roles,OU=Groups,OU=N
 # cassandra keyspace
 cassandra_keyspace: evil_corp
 
-cassandra01: apigw-cass01
-cassandra02: apigw-cass02
-cassandra03: apigw-cass03
-cassandra04: apigw-cass04
-cassandra05: apigw-cass05
-cassandra06: apigw-cass06
+cassandra01: dev-apigw-cass01
+cassandra02: dev-apigw-cass02
+cassandra03: dev-apigw-cass03
+cassandra04: dev-apigw-cass04
+cassandra05: dev-apigw-cass05
+cassandra06: dev-apigw-cass06
 
 cassandra_cluster_name: API GW TEST
 
+# cassandra hosts (is not overriden  is done based on which group the server belongs to )
 ### PSD2 settings
-issuer: 'https://api-test.customer.no'
+issuer: 'https://dev-api-internal.test.customer.no'
 # claim iss
 token_lifespan: 240
 # claim exp + iat (in secounds)
 psd2_token_audience: 'evry-psd2-platform'
 
 # Filebeat
-filebeat_username: changeme
+filebeat_username: gOy2kORDtU6QmPxQho0P9SqdsGgvUB3S61m3TzpcnK1J
+
+
